@@ -1,10 +1,10 @@
 {
-  "name": "sandbox",
-  "version": "1.0.0",
-  "description": "",
+  "name": "vscode-icons-figma",
+  "version": "2.0.0",
+  "description": "A Figma plugin to use VS Code icons",
   "main": "code.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "watch": "webpack --mode=development --watch"
   },
   "author": "",
   "license": "ISC",
