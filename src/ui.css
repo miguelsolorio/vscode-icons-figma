@@ -1,0 +1,67 @@
+@import url('reset.css');
+
+@font-face {
+  font-family: codicons;
+  src: url('https://raw.githubusercontent.com/microsoft/vscode-codicons/main/dist/codicon.ttf');
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+  flex-direction: column;
+}
+
+glyph {
+  color: #333;
+  font-size: 20px;
+  font-family: codicons;
+}
+
+ul {
+  margin: 0;
+  padding: 0 4px;
+  display: grid;
+  grid-gap: 4px;
+  overflow-y: scroll;
+  /* height: 100%; */
+  grid-template-columns: repeat(6, auto);
+}
+
+li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 8px;
+  border-radius: 4px;
+}
+
+li:hover {
+  cursor: pointer;
+  background-color: rgba(0,0,0,.04);
+}
+
+metadata {
+  display: none;
+}
+
+#search {
+  margin: 8px;
+  padding: 8px;
+  border-radius: 3px;
+  outline: none;
+  border: 2px solid #E5E5E5;
+}
+
+#search::placeholder{
+  color: #b3b3b3; 
+}
+
+#search:focus {
+  border: 2px solid #18A0FB;
+}

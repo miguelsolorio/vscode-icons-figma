@@ -1,0 +1,16 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "shell",
+			"command": "npx webpack --mode=development --watch",
+			"problemMatcher": [],
+			"label": "webpack watch",
+			"detail": "builds using webpack",
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			}
+		}
+	]
+}
