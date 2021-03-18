@@ -15,6 +15,7 @@ icons.forEach((icon: {
   let iconName = icon.short_name.replace(/-/g, ' ')
   let iconDescription = icon.description
   let iconGlyph = icon.character
+  iconListItem.setAttribute('icon-glyph', iconGlyph)
   
   iconListItem.innerHTML += `<glyph>${iconGlyph}</glyph>`
   iconListItem.innerHTML += `<metadata> ${iconName} ${iconDescription} </metadata>`
@@ -46,6 +47,15 @@ search.addEventListener('keyup', function () {
 
 search.focus();
 
+iconList.addEventListener('click', function (e) {
+  
+  let name = <HTMLElement>e.target
+  let glyph = name.getAttribute('icon-glyph')
+  if (glyph != null) {
+    // place item on Figma
+    parent.postMessage({ pluginMessage: { type: 'create-icon', glyph } }, '*')
+  }
+})
 
 // document.getElementById('create').onclick = () => {
 //   const textbox = document.getElementById('count') as HTMLInputElement

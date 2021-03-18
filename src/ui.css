@@ -20,6 +20,7 @@ glyph {
   color: #333;
   font-size: 20px;
   font-family: codicons;
+  pointer-events: none;
 }
 
 ul {

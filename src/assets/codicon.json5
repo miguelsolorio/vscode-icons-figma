@@ -1129,7 +1129,8 @@
   {
     "short_name": "person",
     "character": "",
-    "unicode": "EA67"
+    "unicode": "EA67",
+    "description": "person people face user contact outline"
   },
   {
     "short_name": "pin",
