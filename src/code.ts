@@ -13,6 +13,7 @@ const setiColorStyleId = 'S:9fc238b130e8f6f24ab1ecfaff5ecd1f1389528f,2919:5'
 const nodes: SceneNode[] = [];
 const data = require('./assets/codicon.json5')
 const icons = data['default']
+let hasAccess = true
 
 figma.ui.onmessage = async msg => {
   const nodes = []
@@ -20,28 +21,42 @@ figma.ui.onmessage = async msg => {
   if (msg.type === 'create-icon') {
     
     // load libraries
+    await figma.loadFontAsync({ family: "Roboto", style: "Regular" })
     await figma.loadFontAsync({ family: "codicon", style: "Regular" });
-    await figma.importStyleByKeyAsync(setiTextStyleKey)
-    await figma.importStyleByKeyAsync(setiColorStyleKey)
-    await figma.importStyleByKeyAsync(codiconTextStyleKey)
-    await figma.importStyleByKeyAsync(codiconColorStyleKey)
+    await figma.loadFontAsync({ family: "seti", style: "Regular" });
+    await figma.importStyleByKeyAsync(codiconTextStyleKey).catch(() => {
+      console.log('no access to style')
+      hasAccess = false
+    });
+
+    if (hasAccess){
+      await figma.importStyleByKeyAsync(codiconColorStyleKey)
+      await figma.importStyleByKeyAsync(setiTextStyleKey)
+      await figma.importStyleByKeyAsync(setiColorStyleKey)
+    }
+    
 
     // create new text object
     if (figma.currentPage.selection.length == 0) {
 
       const text: TextNode = figma.createText()
-      text.fontName = { family: "codicon", style: "Regular" }
       text.characters = msg.glyph
       text.fontSize = 16
 
       if (msg.library == 'seti') {
         text.name = 'seti: ' + msg.name
-        text.textStyleId = setiTextStyleId
-        text.fillStyleId = setiColorStyleId
+        text.fontName = { family: "seti", style: "Regular" }
+        if (hasAccess){
+          text.textStyleId = setiTextStyleId
+          text.fillStyleId = setiColorStyleId
+        }
       } else {
         text.name = 'codicon: ' + msg.name
-        text.textStyleId = codiconTextStyleId
-        text.fillStyleId = codiconColorStyleId
+        text.fontName = { family: "codicon", style: "Regular" }
+        if (hasAccess) {
+          text.textStyleId = codiconTextStyleId
+          text.fillStyleId = codiconColorStyleId
+        }
       }
 
       nodes.push(text)
@@ -62,10 +77,12 @@ figma.ui.onmessage = async msg => {
 
       if (msg.library == 'seti') {
         text.name = 'seti: ' + msg.name
-        text.textStyleId = setiTextStyleId
+        text.fontName = { family: "seti", style: "Regular" }
+        if (hasAccess) { text.textStyleId = setiTextStyleId }
       } else {
         text.name = 'codicon: ' + msg.name
-        text.textStyleId = codiconTextStyleId
+        text.fontName = { family: "codicon", style: "Regular" }
+        if (hasAccess) { text.textStyleId = codiconTextStyleId }
       }
 
       nodes.push(text)
