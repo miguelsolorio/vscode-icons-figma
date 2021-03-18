@@ -1,4 +1,4 @@
-figma.showUI(__html__, { width: 320, height: 350 })
+figma.showUI(__html__, { width: 350, height: 450 })
 
 const codiconTextStyleKey = '640604ee4b4f01ff327acfaaa8305c92199c7473'
 const codiconTextStyleId = 'S:640604ee4b4f01ff327acfaaa8305c92199c7473,2712:14'
@@ -15,8 +15,10 @@ const data = require('./assets/codicon.json5')
 const icons = data['default']
 
 figma.ui.onmessage = async msg => {
+  const nodes = []
+  
   if (msg.type === 'create-icon') {
-
+    
     // load libraries
     await figma.loadFontAsync({ family: "codicon", style: "Regular" });
     await figma.importStyleByKeyAsync(setiTextStyleKey)
@@ -44,6 +46,8 @@ figma.ui.onmessage = async msg => {
 
       nodes.push(text)
       figma.currentPage.selection = nodes
+      figma.viewport.scrollAndZoomIntoView(nodes)
+
     }
 
     // replace text objbect
@@ -64,11 +68,17 @@ figma.ui.onmessage = async msg => {
         text.textStyleId = codiconTextStyleId
       }
 
+      nodes.push(text)
+      figma.currentPage.selection = nodes
+      figma.viewport.scrollAndZoomIntoView(nodes)
+
     }
 
-
+    
 
   }
+
+  
 
 
 
