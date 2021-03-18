@@ -12,13 +12,15 @@ icons.forEach((icon: {
     description: string,
   }) => {
   let iconListItem = document.createElement('li')
-  let iconName = icon.short_name.replace(/-/g, ' ')
+  let iconName = icon.short_name
+  let iconFriendlyName = icon.short_name.replace(/-/g, ' ')
   let iconDescription = icon.description
   let iconGlyph = icon.character
   iconListItem.setAttribute('icon-glyph', iconGlyph)
+  iconListItem.setAttribute('icon-name', iconName)
   
   iconListItem.innerHTML += `<glyph>${iconGlyph}</glyph>`
-  iconListItem.innerHTML += `<metadata> ${iconName} ${iconDescription} </metadata>`
+  iconListItem.innerHTML += `<metadata> ${iconFriendlyName} ${iconDescription} </metadata>`
 
   iconList.appendChild(iconListItem)
 })
@@ -49,11 +51,12 @@ search.focus();
 
 iconList.addEventListener('click', function (e) {
   
-  let name = <HTMLElement>e.target
-  let glyph = name.getAttribute('icon-glyph')
+  let iconElm = <HTMLElement>e.target
+  let glyph = iconElm.getAttribute('icon-glyph')
+  let name = iconElm.getAttribute('icon-name')
   if (glyph != null) {
     // place item on Figma
-    parent.postMessage({ pluginMessage: { type: 'create-icon', glyph } }, '*')
+    parent.postMessage({ pluginMessage: { type: 'create-icon', glyph, name } }, '*')
   }
 })
 

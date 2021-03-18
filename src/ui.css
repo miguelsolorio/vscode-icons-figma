@@ -10,6 +10,8 @@
 }
 
 body {
+  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;
+  font-size: 16px;
   display: flex;
   height: 100vh;
   overflow: hidden;
@@ -18,7 +20,7 @@ body {
 
 glyph {
   color: #333;
-  font-size: 20px;
+  font-size: 26px;
   font-family: codicons;
   pointer-events: none;
 }
@@ -52,9 +54,8 @@ metadata {
 }
 
 #search {
-  margin: 8px;
+  margin: 12px 8px 8px;
   padding: 8px;
-  border-radius: 3px;
   outline: none;
   border: 2px solid #E5E5E5;
 }
@@ -64,5 +65,26 @@ metadata {
 }
 
 #search:focus {
-  border: 2px solid #18A0FB;
+  border: 2px solid #007fd4;
+}
+
+
+@media screen and (prefers-color-scheme: dark) {
+  body, input {
+    color: #ccc;
+    background-color: #252526;
+  }
+  glyph {
+    color: #ccc;
+  }
+  li:hover {
+  background-color: rgba(255,255,255,.08);
+  }
+  #search {
+    background-color: #3C3C3C;
+    border-color: transparent;
+  }
+  #search::placeholder{
+    color: #A6A6A6; 
+  }
 }
