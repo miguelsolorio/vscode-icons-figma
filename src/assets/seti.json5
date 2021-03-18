@@ -1,0 +1,890 @@
+[
+  {
+    "short_name": "R",
+    "character": "",
+    "unicode": "E001",
+    "description": ""
+  },
+  {
+    "short_name": "apple",
+    "character": "",
+    "unicode": "E002",
+    "description": ""
+  },
+  {
+    "short_name": "argdown",
+    "character": "",
+    "unicode": "E003",
+    "description": ""
+  },
+  {
+    "short_name": "asm",
+    "character": "",
+    "unicode": "E004",
+    "description": ""
+  },
+  {
+    "short_name": "audio",
+    "character": "",
+    "unicode": "E005",
+    "description": ""
+  },
+  {
+    "short_name": "babel",
+    "character": "",
+    "unicode": "E006",
+    "description": ""
+  },
+  {
+    "short_name": "bower",
+    "character": "",
+    "unicode": "E007",
+    "description": ""
+  },
+  {
+    "short_name": "bsl",
+    "character": "",
+    "unicode": "E008",
+    "description": ""
+  },
+  {
+    "short_name": "c-sharp",
+    "character": "",
+    "unicode": "E009",
+    "description": ""
+  },
+  {
+    "short_name": "c",
+    "character": "",
+    "unicode": "E00A",
+    "description": ""
+  },
+  {
+    "short_name": "cake",
+    "character": "",
+    "unicode": "E00B",
+    "description": ""
+  },
+  {
+    "short_name": "cake_php",
+    "character": "",
+    "unicode": "E00C",
+    "description": ""
+  },
+  {
+    "short_name": "checkbox-unchecked",
+    "character": "",
+    "unicode": "E00D",
+    "description": ""
+  },
+  {
+    "short_name": "checkbox",
+    "character": "",
+    "unicode": "E00E",
+    "description": ""
+  },
+  {
+    "short_name": "cjsx",
+    "character": "",
+    "unicode": "E00F",
+    "description": ""
+  },
+  {
+    "short_name": "clock",
+    "character": "",
+    "unicode": "E010",
+    "description": ""
+  },
+  {
+    "short_name": "clojure",
+    "character": "",
+    "unicode": "E011",
+    "description": ""
+  },
+  {
+    "short_name": "code-climate",
+    "character": "",
+    "unicode": "E012",
+    "description": ""
+  },
+  {
+    "short_name": "code-search",
+    "character": "",
+    "unicode": "E013",
+    "description": ""
+  },
+  {
+    "short_name": "coldfusion",
+    "character": "",
+    "unicode": "E016",
+    "description": ""
+  },
+  {
+    "short_name": "config",
+    "character": "",
+    "unicode": "E017",
+    "description": ""
+  },
+  {
+    "short_name": "cpp",
+    "character": "",
+    "unicode": "E018",
+    "description": ""
+  },
+  {
+    "short_name": "crystal",
+    "character": "",
+    "unicode": "E019",
+    "description": ""
+  },
+  {
+    "short_name": "crystal_embedded",
+    "character": "",
+    "unicode": "E01A",
+    "description": ""
+  },
+  {
+    "short_name": "css",
+    "character": "",
+    "unicode": "E01B",
+    "description": ""
+  },
+  {
+    "short_name": "csv",
+    "character": "",
+    "unicode": "E01C",
+    "description": ""
+  },
+  {
+    "short_name": "cu",
+    "character": "",
+    "unicode": "E01D",
+    "description": ""
+  },
+  {
+    "short_name": "d",
+    "character": "",
+    "unicode": "E01E",
+    "description": ""
+  },
+  {
+    "short_name": "dart",
+    "character": "",
+    "unicode": "E01F",
+    "description": ""
+  },
+  {
+    "short_name": "db",
+    "character": "",
+    "unicode": "E020",
+    "description": ""
+  },
+  {
+    "short_name": "default",
+    "character": "",
+    "unicode": "E021",
+    "description": ""
+  },
+  {
+    "short_name": "deprecation-cop",
+    "character": "",
+    "unicode": "E022",
+    "description": ""
+  },
+  {
+    "short_name": "docker",
+    "character": "",
+    "unicode": "E023",
+    "description": ""
+  },
+  {
+    "short_name": "editorconfig",
+    "character": "",
+    "unicode": "E024",
+    "description": ""
+  },
+  {
+    "short_name": "ejs",
+    "character": "",
+    "unicode": "E025",
+    "description": ""
+  },
+  {
+    "short_name": "elixir",
+    "character": "",
+    "unicode": "E026",
+    "description": ""
+  },
+  {
+    "short_name": "elixir_script",
+    "character": "",
+    "unicode": "E027",
+    "description": ""
+  },
+  {
+    "short_name": "elm",
+    "character": "",
+    "unicode": "E028",
+    "description": ""
+  },
+  {
+    "short_name": "error",
+    "character": "",
+    "unicode": "E029",
+    "description": ""
+  },
+  {
+    "short_name": "eslint",
+    "character": "",
+    "unicode": "E02A",
+    "description": ""
+  },
+  {
+    "short_name": "ethereum",
+    "character": "",
+    "unicode": "E02B",
+    "description": ""
+  },
+  {
+    "short_name": "f-sharp",
+    "character": "",
+    "unicode": "E02C",
+    "description": ""
+  },
+  {
+    "short_name": "favicon",
+    "character": "",
+    "unicode": "E02D",
+    "description": ""
+  },
+  {
+    "short_name": "firebase",
+    "character": "",
+    "unicode": "E02E",
+    "description": ""
+  },
+  {
+    "short_name": "firefox",
+    "character": "",
+    "unicode": "E02F",
+    "description": ""
+  },
+  {
+    "short_name": "folder",
+    "character": "",
+    "unicode": "E030",
+    "description": ""
+  },
+  {
+    "short_name": "font",
+    "character": "",
+    "unicode": "E031",
+    "description": ""
+  },
+  {
+    "short_name": "git",
+    "character": "",
+    "unicode": "E032",
+    "description": ""
+  },
+  {
+    "short_name": "github",
+    "character": "",
+    "unicode": "E035",
+    "description": ""
+  },
+  {
+    "short_name": "go",
+    "character": "",
+    "unicode": "E036",
+    "description": ""
+  },
+  {
+    "short_name": "go2",
+    "character": "",
+    "unicode": "E037",
+    "description": ""
+  },
+  {
+    "short_name": "gradle",
+    "character": "",
+    "unicode": "E038",
+    "description": ""
+  },
+  {
+    "short_name": "grails",
+    "character": "",
+    "unicode": "E039",
+    "description": ""
+  },
+  {
+    "short_name": "graphql",
+    "character": "",
+    "unicode": "E03A",
+    "description": ""
+  },
+  {
+    "short_name": "grunt",
+    "character": "",
+    "unicode": "E03B",
+    "description": ""
+  },
+  {
+    "short_name": "gulp",
+    "character": "",
+    "unicode": "E03C",
+    "description": ""
+  },
+  {
+    "short_name": "hacklang",
+    "character": "",
+    "unicode": "E03D",
+    "description": ""
+  },
+  {
+    "short_name": "haml",
+    "character": "",
+    "unicode": "E03E",
+    "description": ""
+  },
+  {
+    "short_name": "happenings",
+    "character": "",
+    "unicode": "E03F",
+    "description": ""
+  },
+  {
+    "short_name": "haskell",
+    "character": "",
+    "unicode": "E040",
+    "description": ""
+  },
+  {
+    "short_name": "haxe",
+    "character": "",
+    "unicode": "E041",
+    "description": ""
+  },
+  {
+    "short_name": "heroku",
+    "character": "",
+    "unicode": "E042",
+    "description": ""
+  },
+  {
+    "short_name": "hex",
+    "character": "",
+    "unicode": "E043",
+    "description": ""
+  },
+  {
+    "short_name": "html",
+    "character": "",
+    "unicode": "E044",
+    "description": ""
+  },
+  {
+    "short_name": "ignored",
+    "character": "",
+    "unicode": "E046",
+    "description": ""
+  },
+  {
+    "short_name": "illustrator",
+    "character": "",
+    "unicode": "E047",
+    "description": ""
+  },
+  {
+    "short_name": "image",
+    "character": "",
+    "unicode": "E048",
+    "description": ""
+  },
+  {
+    "short_name": "info",
+    "character": "",
+    "unicode": "E049",
+    "description": ""
+  },
+  {
+    "short_name": "ionic",
+    "character": "",
+    "unicode": "E04A",
+    "description": ""
+  },
+  {
+    "short_name": "jade",
+    "character": "",
+    "unicode": "E04B",
+    "description": ""
+  },
+  {
+    "short_name": "java",
+    "character": "",
+    "unicode": "E04C",
+    "description": ""
+  },
+  {
+    "short_name": "javascript",
+    "character": "",
+    "unicode": "E04D",
+    "description": ""
+  },
+  {
+    "short_name": "jenkins",
+    "character": "",
+    "unicode": "E04E",
+    "description": ""
+  },
+  {
+    "short_name": "jinja",
+    "character": "",
+    "unicode": "E04F",
+    "description": ""
+  },
+  {
+    "short_name": "json",
+    "character": "",
+    "unicode": "E051",
+    "description": ""
+  },
+  {
+    "short_name": "julia",
+    "character": "",
+    "unicode": "E052",
+    "description": ""
+  },
+  {
+    "short_name": "karma",
+    "character": "",
+    "unicode": "E053",
+    "description": ""
+  },
+  {
+    "short_name": "kotlin",
+    "character": "",
+    "unicode": "E054",
+    "description": ""
+  },
+  {
+    "short_name": "license",
+    "character": "",
+    "unicode": "E056",
+    "description": ""
+  },
+  {
+    "short_name": "liquid",
+    "character": "",
+    "unicode": "E057",
+    "description": ""
+  },
+  {
+    "short_name": "livescript",
+    "character": "",
+    "unicode": "E058",
+    "description": ""
+  },
+  {
+    "short_name": "lock",
+    "character": "",
+    "unicode": "E059",
+    "description": ""
+  },
+  {
+    "short_name": "lua",
+    "character": "",
+    "unicode": "E05A",
+    "description": ""
+  },
+  {
+    "short_name": "makefile",
+    "character": "",
+    "unicode": "E05B",
+    "description": ""
+  },
+  {
+    "short_name": "markdown",
+    "character": "",
+    "unicode": "E05C",
+    "description": ""
+  },
+  {
+    "short_name": "maven",
+    "character": "",
+    "unicode": "E05D",
+    "description": ""
+  },
+  {
+    "short_name": "mdo",
+    "character": "",
+    "unicode": "E05E",
+    "description": ""
+  },
+  {
+    "short_name": "mustache",
+    "character": "",
+    "unicode": "E05F",
+    "description": ""
+  },
+  {
+    "short_name": "new-file",
+    "character": "",
+    "unicode": "E060",
+    "description": ""
+  },
+  {
+    "short_name": "npm",
+    "character": "",
+    "unicode": "E061",
+    "description": ""
+  },
+  {
+    "short_name": "npm_ignored",
+    "character": "",
+    "unicode": "E062",
+    "description": ""
+  },
+  {
+    "short_name": "nunjucks",
+    "character": "",
+    "unicode": "E063",
+    "description": ""
+  },
+  {
+    "short_name": "ocaml",
+    "character": "",
+    "unicode": "E064",
+    "description": ""
+  },
+  {
+    "short_name": "odata",
+    "character": "",
+    "unicode": "E065",
+    "description": ""
+  },
+  {
+    "short_name": "pddl",
+    "character": "",
+    "unicode": "E066",
+    "description": ""
+  },
+  {
+    "short_name": "pdf",
+    "character": "",
+    "unicode": "E067",
+    "description": ""
+  },
+  {
+    "short_name": "perl",
+    "character": "",
+    "unicode": "E068",
+    "description": ""
+  },
+  {
+    "short_name": "photoshop",
+    "character": "",
+    "unicode": "E069",
+    "description": ""
+  },
+  {
+    "short_name": "php",
+    "character": "",
+    "unicode": "E06A",
+    "description": ""
+  },
+  {
+    "short_name": "plan",
+    "character": "",
+    "unicode": "E06B",
+    "description": ""
+  },
+  {
+    "short_name": "platformio",
+    "character": "",
+    "unicode": "E06C",
+    "description": ""
+  },
+  {
+    "short_name": "powershell",
+    "character": "",
+    "unicode": "E06D",
+    "description": ""
+  },
+  {
+    "short_name": "project",
+    "character": "",
+    "unicode": "E06E",
+    "description": ""
+  },
+  {
+    "short_name": "prolog",
+    "character": "",
+    "unicode": "E06F",
+    "description": ""
+  },
+  {
+    "short_name": "pug",
+    "character": "",
+    "unicode": "E070",
+    "description": ""
+  },
+  {
+    "short_name": "puppet",
+    "character": "",
+    "unicode": "E071",
+    "description": ""
+  },
+  {
+    "short_name": "python",
+    "character": "",
+    "unicode": "E072",
+    "description": ""
+  },
+  {
+    "short_name": "rails",
+    "character": "",
+    "unicode": "E073",
+    "description": ""
+  },
+  {
+    "short_name": "react",
+    "character": "",
+    "unicode": "E074",
+    "description": ""
+  },
+  {
+    "short_name": "reasonml",
+    "character": "",
+    "unicode": "E075",
+    "description": ""
+  },
+  {
+    "short_name": "rollup",
+    "character": "",
+    "unicode": "E076",
+    "description": ""
+  },
+  {
+    "short_name": "ruby",
+    "character": "",
+    "unicode": "E077",
+    "description": ""
+  },
+  {
+    "short_name": "rust",
+    "character": "",
+    "unicode": "E078",
+    "description": ""
+  },
+  {
+    "short_name": "salesforce",
+    "character": "",
+    "unicode": "E079",
+    "description": ""
+  },
+  {
+    "short_name": "sass",
+    "character": "",
+    "unicode": "E07A",
+    "description": ""
+  },
+  {
+    "short_name": "sbt",
+    "character": "",
+    "unicode": "E07B",
+    "description": ""
+  },
+  {
+    "short_name": "scala",
+    "character": "",
+    "unicode": "E07C",
+    "description": ""
+  },
+  {
+    "short_name": "search",
+    "character": "",
+    "unicode": "E07D",
+    "description": ""
+  },
+  {
+    "short_name": "settings",
+    "character": "",
+    "unicode": "E07E",
+    "description": ""
+  },
+  {
+    "short_name": "shell",
+    "character": "",
+    "unicode": "E07F",
+    "description": ""
+  },
+  {
+    "short_name": "slim",
+    "character": "",
+    "unicode": "E080",
+    "description": ""
+  },
+  {
+    "short_name": "smarty",
+    "character": "",
+    "unicode": "E081",
+    "description": ""
+  },
+  {
+    "short_name": "spring",
+    "character": "",
+    "unicode": "E082",
+    "description": ""
+  },
+  {
+    "short_name": "stylelint",
+    "character": "",
+    "unicode": "E083",
+    "description": ""
+  },
+  {
+    "short_name": "stylus",
+    "character": "",
+    "unicode": "E084",
+    "description": ""
+  },
+  {
+    "short_name": "sublime",
+    "character": "",
+    "unicode": "E085",
+    "description": ""
+  },
+  {
+    "short_name": "svg",
+    "character": "",
+    "unicode": "E086",
+    "description": ""
+  },
+  {
+    "short_name": "swift",
+    "character": "",
+    "unicode": "E087",
+    "description": ""
+  },
+  {
+    "short_name": "terraform",
+    "character": "",
+    "unicode": "E088",
+    "description": ""
+  },
+  {
+    "short_name": "tex",
+    "character": "",
+    "unicode": "E089",
+    "description": ""
+  },
+  {
+    "short_name": "todo",
+    "character": "",
+    "unicode": "E08B",
+    "description": ""
+  },
+  {
+    "short_name": "tsconfig",
+    "character": "",
+    "unicode": "E08C",
+    "description": ""
+  },
+  {
+    "short_name": "twig",
+    "character": "",
+    "unicode": "E08D",
+    "description": ""
+  },
+  {
+    "short_name": "typescript",
+    "character": "",
+    "unicode": "E08E",
+    "description": ""
+  },
+  {
+    "short_name": "vala",
+    "character": "",
+    "unicode": "E08F",
+    "description": ""
+  },
+  {
+    "short_name": "video",
+    "character": "",
+    "unicode": "E090",
+    "description": ""
+  },
+  {
+    "short_name": "vue",
+    "character": "",
+    "unicode": "E091",
+    "description": ""
+  },
+  {
+    "short_name": "wasm",
+    "character": "",
+    "unicode": "E092",
+    "description": ""
+  },
+  {
+    "short_name": "wat",
+    "character": "",
+    "unicode": "E093",
+    "description": ""
+  },
+  {
+    "short_name": "webpack",
+    "character": "",
+    "unicode": "E094",
+    "description": ""
+  },
+  {
+    "short_name": "wgt",
+    "character": "",
+    "unicode": "E095",
+    "description": ""
+  },
+  {
+    "short_name": "windows",
+    "character": "",
+    "unicode": "E096",
+    "description": ""
+  },
+  {
+    "short_name": "word",
+    "character": "",
+    "unicode": "E097",
+    "description": ""
+  },
+  {
+    "short_name": "xls",
+    "character": "",
+    "unicode": "E098",
+    "description": ""
+  },
+  {
+    "short_name": "xml",
+    "character": "",
+    "unicode": "E099",
+    "description": ""
+  },
+  {
+    "short_name": "yarn",
+    "character": "",
+    "unicode": "E09A",
+    "description": ""
+  },
+  {
+    "short_name": "yml",
+    "character": "",
+    "unicode": "E09B",
+    "description": ""
+  },
+  {
+    "short_name": "zip",
+    "character": "",
+    "unicode": "E09C",
+    "description": ""
+  }
+]

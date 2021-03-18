@@ -2,7 +2,12 @@
 
 @font-face {
   font-family: codicons;
-  src: url('https://raw.githubusercontent.com/microsoft/vscode-codicons/main/dist/codicon.ttf');
+  src: url('./assets/codicon.ttf');
+}
+
+@font-face {
+  font-family: seti;
+  src: url('./assets/seti.ttf');
 }
 
 * {
@@ -21,7 +26,6 @@ body {
 glyph {
   color: #333;
   font-size: 26px;
-  font-family: codicons;
   pointer-events: none;
 }
 
@@ -47,6 +51,14 @@ li {
 li:hover {
   cursor: pointer;
   background-color: rgba(0,0,0,.04);
+}
+
+li[icon-library="codicon"] glyph {
+  font-family: codicons;
+}
+
+li[icon-library="seti"] glyph {
+  font-family: seti;
 }
 
 metadata {

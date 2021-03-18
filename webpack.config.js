@@ -23,7 +23,7 @@ module.exports = (env, argv) => ({
       { test: /\.css$/, loader: [{ loader: 'style-loader' }, { loader: 'css-loader' }] },
 
       // Allows you to use "<%= require('./file.svg') %>" in your HTML code to get a data URI
-      { test: /\.(png|jpg|gif|webp|svg|zip|csv|json)$/, loader: [{ loader: 'url-loader' }] },
+      { test: /\.(png|jpg|gif|webp|svg|zip|csv|ttf)$/, loader: [{ loader: 'url-loader' }] },
 
       // { test: /\.json$/, loader: ['json-loader'], include: path.resolve(__dirname, 'src/assets') }
       { test: /\.json5$/, loader: ['json5-loader'], include: path.resolve(__dirname, 'src/assets') }
