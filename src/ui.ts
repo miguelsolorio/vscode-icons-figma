@@ -8,6 +8,21 @@ const iconList = document.getElementById('icon-list')
 const codicons = codicon['default']
 const setiIcons = seti['default']
 
+onmessage = (event) => {
+
+  const pluginMessage = event.data.pluginMessage
+
+  if (pluginMessage.type == 'noIcons') {
+    banner.className += ('noIcons');
+    if (!pluginMessage.codicons){
+      banner.className += ('noCodicons');
+    }
+    if (!pluginMessage.seti) {
+      banner.className += ('noSeti');
+    }
+  }
+}
+
 codicons.forEach((icon: {
     short_name: string,
     character: string,

@@ -27,6 +27,10 @@ body {
   display: none;
 }
 
+#banner.noIcons {
+  display: block;
+}
+
 glyph {
   color: #333;
   font-size: 26px;

@@ -35,7 +35,7 @@ figma.importStyleByKeyAsync(codiconTextStyleKey).catch(() => {
 });
 
 if(!hasCodicons || !hasSeti){
-  
+  figma.ui.postMessage({ type: 'noIcons', codicons: hasCodicons, seti: hasSeti })
 }
 
 figma.ui.onmessage = async msg => {
