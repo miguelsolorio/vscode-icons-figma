@@ -67,27 +67,41 @@ figma.ui.onmessage = async msg => {
 
     // replace text objbect
     else {
-      // unload current font
-      let selection = <TextNode>figma.currentPage.selection[0]
-      let currentFontName = selection.fontName
-      await figma.loadFontAsync({ family: `${currentFontName['family']}`, style: `${currentFontName['style']}` });
 
-      let text = <TextNode>selection
-      text.characters = msg.glyph
+      let selectionLength = figma.currentPage.selection.length
+      for(let i=0; i < selectionLength; i++){
 
-      if (msg.library == 'seti') {
-        text.name = 'seti: ' + msg.name
-        text.fontName = { family: "seti", style: "Regular" }
-        if (hasAccess) { text.textStyleId = setiTextStyleId }
-      } else {
-        text.name = 'codicon: ' + msg.name
-        text.fontName = { family: "codicon", style: "Regular" }
-        if (hasAccess) { text.textStyleId = codiconTextStyleId }
+        // unload current font
+        let selection = <TextNode>figma.currentPage.selection[i]
+        let currentFontName = selection.fontName
+        await figma.loadFontAsync({ family: `${currentFontName['family']}`, style: `${currentFontName['style']}` });
+
+        let currentFont = <String>currentFontName['family']
+        let text = <TextNode>selection
+        text.characters = msg.glyph
+
+        if (msg.library == 'seti') {
+          if (hasAccess && currentFont != 'seti') {
+            text.textStyleId = setiTextStyleId
+          } else {
+            text.name = 'seti: ' + msg.name
+            text.fontName = { family: "seti", style: "Regular" }
+          }
+        } else {
+          if (hasAccess && currentFont != 'codicon') {
+              text.textStyleId = codiconTextStyleId
+          } else {
+            text.name = 'codicon: ' + msg.name
+            text.fontName = { family: "codicon", style: "Regular" }
+          }
+        }
+
+        nodes.push(text)
+
       }
 
-      nodes.push(text)
+      
       figma.currentPage.selection = nodes
-      figma.viewport.scrollAndZoomIntoView(nodes)
 
     }
 
