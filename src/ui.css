@@ -23,6 +23,10 @@ body {
   flex-direction: column;
 }
 
+#banner {
+  display: none;
+}
+
 glyph {
   color: #333;
   font-size: 26px;

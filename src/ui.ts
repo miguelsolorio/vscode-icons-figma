@@ -2,7 +2,8 @@ import './ui.css'
 
 const codicon = require('./assets/codicon.json5')
 const seti = require('./assets/seti.json5')
-const search = <HTMLInputElement>document.getElementById('search');
+const search = <HTMLInputElement>document.getElementById('search')
+const banner = <HTMLElement>document.getElementById('banner')
 const iconList = document.getElementById('icon-list')
 const codicons = codicon['default']
 const setiIcons = seti['default']
@@ -84,13 +85,3 @@ iconList.addEventListener('click', function (e) {
     parent.postMessage({ pluginMessage: { type: 'create-icon', glyph, name, library } }, '*')
   }
 })
-
-// document.getElementById('create').onclick = () => {
-//   const textbox = document.getElementById('count') as HTMLInputElement
-//   const count = parseInt(textbox.value, 10)
-//   parent.postMessage({ pluginMessage: { type: 'create-rectangles', count } }, '*')
-// }
-
-// document.getElementById('cancel').onclick = () => {
-//   parent.postMessage({ pluginMessage: { type: 'cancel' } }, '*')
-// }

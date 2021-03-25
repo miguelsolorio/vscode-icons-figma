@@ -14,21 +14,35 @@ const nodes: SceneNode[] = [];
 const data = require('./assets/codicon.json5')
 const icons = data['default']
 let hasAccess = true
+let hasCodicons
+let hasSeti
+
+// load fonts
+figma.loadFontAsync({ family: "Roboto", style: "Regular" });
+figma.loadFontAsync({ family: "codicon", style: "Regular" }).catch(() => {
+  console.log('no codicons')
+  hasCodicons = false
+});
+
+figma.loadFontAsync({ family: "seti", style: "Regular" }).catch(() => {
+  console.log('no seti')
+  hasSeti = false
+});
+
+figma.importStyleByKeyAsync(codiconTextStyleKey).catch(() => {
+  console.log('no access to style')
+  hasAccess = false
+});
+
+if(!hasCodicons || !hasSeti){
+  
+}
 
 figma.ui.onmessage = async msg => {
+
   const nodes = []
   
   if (msg.type === 'create-icon') {
-    
-    // load libraries
-    await figma.loadFontAsync({ family: "Roboto", style: "Regular" })
-    await figma.loadFontAsync({ family: "codicon", style: "Regular" });
-    await figma.loadFontAsync({ family: "seti", style: "Regular" });
-    await figma.importStyleByKeyAsync(codiconTextStyleKey).catch(() => {
-      console.log('no access to style')
-      hasAccess = false
-    });
-
     if (hasAccess){
       await figma.importStyleByKeyAsync(codiconColorStyleKey)
       await figma.importStyleByKeyAsync(setiTextStyleKey)
