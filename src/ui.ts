@@ -15,9 +15,10 @@ onmessage = (event) => {
 
   const pluginMessage = event.data.pluginMessage
   
-  if (pluginMessage.icon == 'codicons') {
+  if (pluginMessage.font == 'codicons' && pluginMessage.missing == true) {
+    console.log('no codicons')
     bannerCodicon.classList.add('show');
-  } else {
+  } else if (pluginMessage.font == 'codicons' && pluginMessage.missing == false) {
     loadCodicons = true
     console.log('load codicons')
     codicons.forEach((icon: {
@@ -42,9 +43,9 @@ onmessage = (event) => {
     })
   }
 
-  if (pluginMessage.icon == 'seti') {
+  if (pluginMessage.font == 'seti' && pluginMessage.missing == true) {
     bannerSeti.classList.add('show');
-  } else {
+  } else if (pluginMessage.font == 'seti' && pluginMessage.missing == false) {
     loadSeti = true
     setiIcons.forEach((icon: {
       short_name: string,
@@ -94,18 +95,20 @@ onmessage = (event) => {
 
     search.focus();
 
-    iconList.addEventListener('click', function (e) {
-
-      let iconElm = <HTMLElement>e.target
-      let glyph = iconElm.getAttribute('icon-glyph')
-      let name = iconElm.getAttribute('icon-name')
-      let library = iconElm.getAttribute('icon-library')
-      if (glyph != null) {
-        // place item on Figma
-        parent.postMessage({ pluginMessage: { type: 'create-icon', glyph, name, library } }, '*')
-      }
-    })
+    
   } else {
     search.classList.add('disabled')
   }
 }
+
+iconList.addEventListener('click', function (e) {
+
+  let iconElm = <HTMLElement>e.target
+  let glyph = iconElm.getAttribute('icon-glyph')
+  let name = iconElm.getAttribute('icon-name')
+  let library = iconElm.getAttribute('icon-library')
+  if (glyph != null) {
+    // place item on Figma
+    parent.postMessage({ pluginMessage: { type: 'create-icon', glyph, name, library } }, '*')
+  }
+})
