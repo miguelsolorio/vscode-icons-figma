@@ -1,5 +1,3 @@
-figma.showUI(__html__, { width: 350, height: 450 })
-
 const codiconTextStyleKey = '640604ee4b4f01ff327acfaaa8305c92199c7473'
 const codiconTextStyleId = 'S:640604ee4b4f01ff327acfaaa8305c92199c7473,2712:14'
 const codiconColorStyleKey = '41f0c94d560e9b73b202dfc059e411effca235a4'
@@ -13,118 +11,113 @@ const setiColorStyleId = 'S:9fc238b130e8f6f24ab1ecfaff5ecd1f1389528f,2919:5'
 const nodes: SceneNode[] = [];
 const data = require('./assets/codicon.json5')
 const icons = data['default']
-let hasAccess = true
-let hasCodicons
-let hasSeti
+let hasAccess: boolean
+
+function loadStyles(val){
+  hasAccess = val
+}
+loadStyles(true)
 
 // load fonts
-figma.loadFontAsync({ family: "Roboto", style: "Regular" });
-figma.loadFontAsync({ family: "codicon", style: "Regular" }).catch(() => {
-  console.log('no codicons')
-  hasCodicons = false
-});
-
-figma.loadFontAsync({ family: "seti", style: "Regular" }).catch(() => {
-  console.log('no seti')
-  hasSeti = false
-});
-
-figma.importStyleByKeyAsync(codiconTextStyleKey).catch(() => {
-  console.log('no access to style')
-  hasAccess = false
-});
-
-if(!hasCodicons || !hasSeti){
-  figma.ui.postMessage({ type: 'noIcons', codicons: hasCodicons, seti: hasSeti })
+const loadFonts = async () => {
+  console.log('loading fonts')
+  figma.loadFontAsync({ family: "Roboto", style: "Regular" })
+  figma.loadFontAsync({ family: "codicon", style: "Regular" }).catch(() => {
+    figma.ui.postMessage({ type: 'noIcons', icon: 'codicons' })
+  })
+  figma.loadFontAsync({ family: "seti", style: "Regular" }).catch(() => {
+    figma.ui.postMessage({ type: 'noIcons', icon: 'seti' })
+  })
+  figma.importStyleByKeyAsync(codiconTextStyleKey).catch(() => {
+    console.log('no access to style')
+    loadStyles(false)
+  })
 }
 
-figma.ui.onmessage = async msg => {
+loadFonts().then(() => {
 
-  const nodes = []
-  
-  if (msg.type === 'create-icon') {
-    if (hasAccess){
-      await figma.importStyleByKeyAsync(codiconColorStyleKey)
-      await figma.importStyleByKeyAsync(setiTextStyleKey)
-      await figma.importStyleByKeyAsync(setiColorStyleKey)
-    }
+  figma.showUI(__html__, { width: 350, height: 450 })
+
+  figma.ui.onmessage = async msg => {
+
+    const nodes = []
     
+    if (msg.type === 'create-icon') {
 
-    // create new text object
-    if (figma.currentPage.selection.length == 0) {
-
-      const text: TextNode = figma.createText()
-      text.characters = msg.glyph
-      text.fontSize = 16
-
-      if (msg.library == 'seti') {
-        text.name = 'seti: ' + msg.name
-        text.fontName = { family: "seti", style: "Regular" }
-        if (hasAccess){
-          text.textStyleId = setiTextStyleId
-          text.fillStyleId = setiColorStyleId
-        }
-      } else {
-        text.name = 'codicon: ' + msg.name
-        text.fontName = { family: "codicon", style: "Regular" }
-        if (hasAccess) {
-          text.textStyleId = codiconTextStyleId
-          text.fillStyleId = codiconColorStyleId
-        }
+      if (hasAccess) {
+        await figma.importStyleByKeyAsync(codiconColorStyleKey)
+        await figma.importStyleByKeyAsync(setiTextStyleKey)
+        await figma.importStyleByKeyAsync(setiColorStyleKey)
       }
 
-      nodes.push(text)
-      figma.currentPage.selection = nodes
-      figma.viewport.scrollAndZoomIntoView(nodes)
 
-    }
+      // create new text object
+      if (figma.currentPage.selection.length == 0) {
 
-    // replace text objbect
-    else {
-
-      let selectionLength = figma.currentPage.selection.length
-      for(let i=0; i < selectionLength; i++){
-
-        // unload current font
-        let selection = <TextNode>figma.currentPage.selection[i]
-        let currentFontName = selection.fontName
-        await figma.loadFontAsync({ family: `${currentFontName['family']}`, style: `${currentFontName['style']}` });
-
-        let currentFont = <String>currentFontName['family']
-        let text = <TextNode>selection
+        const text: TextNode = figma.createText()
         text.characters = msg.glyph
+        text.fontSize = 16
 
         if (msg.library == 'seti') {
-          if (hasAccess && currentFont != 'seti') {
+          text.name = 'seti: ' + msg.name
+          text.fontName = { family: "seti", style: "Regular" }
+          if (hasAccess) {
             text.textStyleId = setiTextStyleId
-          } else {
-            text.name = 'seti: ' + msg.name
-            text.fontName = { family: "seti", style: "Regular" }
+            text.fillStyleId = setiColorStyleId
           }
         } else {
-          if (hasAccess && currentFont != 'codicon') {
-              text.textStyleId = codiconTextStyleId
-          } else {
-            text.name = 'codicon: ' + msg.name
-            text.fontName = { family: "codicon", style: "Regular" }
+          text.name = 'codicon: ' + msg.name
+          text.fontName = { family: "codicon", style: "Regular" }
+          if (hasAccess) {
+            text.textStyleId = codiconTextStyleId
+            text.fillStyleId = codiconColorStyleId
           }
         }
 
         nodes.push(text)
+        figma.currentPage.selection = nodes
+        figma.viewport.scrollAndZoomIntoView(nodes)
 
       }
 
-      
-      figma.currentPage.selection = nodes
+      // replace text objbect
+      else {
 
+        let selectionLength = figma.currentPage.selection.length
+        for (let i = 0; i < selectionLength; i++) {
+
+          // unload current font
+          let selection = <TextNode>figma.currentPage.selection[i]
+          let currentFontName = selection.fontName
+          await figma.loadFontAsync({ family: `${currentFontName['family']}`, style: `${currentFontName['style']}` });
+
+          let currentFont = <String>currentFontName['family']
+          let text = <TextNode>selection
+          text.characters = msg.glyph
+
+          if (msg.library == 'seti') {
+            if (hasAccess && currentFont != 'seti') {
+              text.textStyleId = setiTextStyleId
+            } else {
+              text.name = 'seti: ' + msg.name
+              text.fontName = { family: "seti", style: "Regular" }
+            }
+          } else {
+            if (hasAccess && currentFont != 'codicon') {
+              text.textStyleId = codiconTextStyleId
+            } else {
+              text.name = 'codicon: ' + msg.name
+              text.fontName = { family: "codicon", style: "Regular" }
+            }
+          }
+
+          nodes.push(text)
+
+        }
+
+        figma.currentPage.selection = nodes
+
+      }
     }
-
-    
-
   }
-
-  
-
-
-
-}
+});

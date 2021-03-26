@@ -23,11 +23,33 @@ body {
   flex-direction: column;
 }
 
-#banner {
+.banner {
   display: none;
+  padding: 8px;
+  font-size: 14px;
+  color: white;
+  /* border: 1px solid#BE1100; */
+  margin: 0px 8px 8px;
+  /* background-color: #5A1D1D; */
 }
 
-#banner.noIcons {
+.banner a {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  padding: 8px;
+  width: 100%;
+  color: white;
+  margin-top: 8px;
+  border-radius: 4px;
+  background-color: #007aff;
+}
+
+.banner a:hover {
+  background-color: #2990ff;
+}
+
+.banner.show {
   display: block;
 }
 
@@ -78,6 +100,11 @@ metadata {
   padding: 8px;
   outline: none;
   border: 2px solid #E5E5E5;
+}
+
+#search.disabled {
+  opacity: .4;
+  pointer-events: none;
 }
 
 #search::placeholder{
