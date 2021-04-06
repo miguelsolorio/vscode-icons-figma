@@ -15,7 +15,7 @@ const data = require('./assets/codicon.json5')
 const icons = data['default']
 
 // load fonts
-async function loadFonts(){
+async function loadFonts() {
   await figma.loadFontAsync({ family: "Roboto", style: "Regular" })
   await figma.loadFontAsync({ family: "codicon", style: "Regular" }).catch(e => {
     console.log(e)
@@ -86,30 +86,28 @@ figma.ui.onmessage = async msg => {
         let text = <TextNode>selection
         text.characters = msg.glyph
 
-        if (msg.library == 'codicon' || msg.library == 'seti') {
 
-          // override styles if not codicon
-          if (currentFont !== 'codicon') {
-            text.name = 'codicon: ' + msg.name
-            text.fontName = { family: "codicon", style: "Regular" }
+        // override styles if not codicon
+        if (msg.library == 'codicon' && currentFont !== 'codicon') {
+          text.name = 'codicon: ' + msg.name
+          text.fontName = { family: "codicon", style: "Regular" }
 
-            await figma.importStyleByKeyAsync(codiconTextStyleKey)
-            await figma.importStyleByKeyAsync(codiconColorStyleKey)
-            text.textStyleId = codiconTextStyleId
-
-          }
-
-          // override styles if not seti
-          if (currentFont !== 'seti') {
-            text.name = 'seti: ' + msg.name
-            text.fontName = { family: "seti", style: "Regular" }
-
-            await figma.importStyleByKeyAsync(setiTextStyleKey)
-            await figma.importStyleByKeyAsync(setiColorStyleKey)
-            text.textStyleId = setiTextStyleId
-          }
+          await figma.importStyleByKeyAsync(codiconTextStyleKey)
+          await figma.importStyleByKeyAsync(codiconColorStyleKey)
+          text.textStyleId = codiconTextStyleId
 
         }
+
+        // override styles if not seti
+        if (msg.library == 'seti' && currentFont !== 'seti') {
+          text.name = 'seti: ' + msg.name
+          text.fontName = { family: "seti", style: "Regular" }
+
+          await figma.importStyleByKeyAsync(setiTextStyleKey)
+          await figma.importStyleByKeyAsync(setiColorStyleKey)
+          text.textStyleId = setiTextStyleId
+        }
+
 
         nodes.push(text)
 
