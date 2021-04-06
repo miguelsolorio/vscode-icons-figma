@@ -13,122 +13,94 @@ const setiColorStyleId = 'S:9fc238b130e8f6f24ab1ecfaff5ecd1f1389528f,2919:5'
 const nodes: SceneNode[] = [];
 const data = require('./assets/codicon.json5')
 const icons = data['default']
-let hasAccess: boolean
 
-function loadStyles(val){
-  hasAccess = val
-}
-loadStyles(true)
+// load roboto
+figma.loadFontAsync({ family: "Roboto", style: "Regular" })
+figma.loadFontAsync({ family: "codicon", style: "Regular" })
+figma.loadFontAsync({ family: "seti", style: "Regular" })
+figma.importStyleByKeyAsync(codiconTextStyleKey)
 
-// load fonts
-const loadFonts = async () => {
-  console.log('loading fonts')
-  figma.loadFontAsync({ family: "Roboto", style: "Regular" })
-  figma.loadFontAsync({ family: "codicon", style: "Regular" }).catch(() => {
-    figma.ui.postMessage({ font: 'codicons', missing: true })
-  }).then(() => {
-    figma.ui.postMessage({ font: 'codicons', missing: false })
-  })
-  figma.loadFontAsync({ family: "seti", style: "Regular" }).catch(() => {
-    figma.ui.postMessage({ font: 'seti', missing: true })
-  }).then(() => {
-    figma.ui.postMessage({ font: 'seti', missing: false })
-  })
-  figma.importStyleByKeyAsync(codiconTextStyleKey).catch(() => {
-    console.log('no access to style')
-    loadStyles(false)
-  })
-}
+figma.ui.onmessage = async msg => {
 
-loadFonts().then(() => {
+  const nodes = []
 
-  figma.ui.onmessage = async msg => {
+  if (msg.type === 'create-icon') {
 
-    const nodes = []
-    
-    if (msg.type === 'create-icon') {
+    // create new text object
+    if (figma.currentPage.selection.length == 0) {
 
-      if (hasAccess) {
-        await figma.importStyleByKeyAsync(codiconColorStyleKey)
-        await figma.importStyleByKeyAsync(codiconTextStyleKey)
+      console.log('creating new text object')
+      const text: TextNode = figma.createText()
+      text.characters = msg.glyph
+      text.fontSize = 16
+
+      if (msg.library == 'seti') {
+        text.name = 'seti: ' + msg.name
+        text.fontName = { family: "seti", style: "Regular" }
+
         await figma.importStyleByKeyAsync(setiTextStyleKey)
         await figma.importStyleByKeyAsync(setiColorStyleKey)
+        text.textStyleId = setiTextStyleId
+        text.fillStyleId = setiColorStyleId
+      } if (msg.library == 'codicon') {
+        text.name = 'codicon: ' + msg.name
+        text.fontName = { family: "codicon", style: "Regular" }
+
+        await figma.importStyleByKeyAsync(codiconTextStyleKey)
+        await figma.importStyleByKeyAsync(codiconColorStyleKey)
+        text.textStyleId = codiconTextStyleId
+        text.fillStyleId = codiconColorStyleId
       }
 
+      nodes.push(text)
+      figma.currentPage.selection = nodes
+      figma.viewport.scrollAndZoomIntoView(nodes)
 
-      // create new text object
-      if (figma.currentPage.selection.length == 0) {
-        console.log('creating new text object')
-        const text: TextNode = figma.createText()
+    } else {
+
+      console.log('replace text object')
+
+      let selectionLength = figma.currentPage.selection.length
+
+      for (let i = 0; i < selectionLength; i++) {
+
+        // unload current font
+        let selection = <TextNode>figma.currentPage.selection[i]
+        let currentFontName = selection.fontName
+        await figma.loadFontAsync({ family: `${currentFontName['family']}`, style: `${currentFontName['style']}` });
+
+        let currentFont = <String>currentFontName['family']
+        let text = <TextNode>selection
         text.characters = msg.glyph
-        text.fontSize = 16
 
         if (msg.library == 'seti') {
+
           text.name = 'seti: ' + msg.name
           text.fontName = { family: "seti", style: "Regular" }
-          if (hasAccess) {
-            text.textStyleId = setiTextStyleId
-            text.fillStyleId = setiColorStyleId
-          }
-        } else {
+
+          await figma.importStyleByKeyAsync(setiTextStyleKey)
+          await figma.importStyleByKeyAsync(setiColorStyleKey)
+          text.textStyleId = setiTextStyleId
+
+        }
+
+        if (msg.library == 'codicon') {
+
           text.name = 'codicon: ' + msg.name
           text.fontName = { family: "codicon", style: "Regular" }
-          if (hasAccess) {
-            text.textStyleId = codiconTextStyleId
-            text.fillStyleId = codiconColorStyleId
-          }
+
+          await figma.importStyleByKeyAsync(codiconTextStyleKey)
+          await figma.importStyleByKeyAsync(codiconColorStyleKey)
+          text.textStyleId = codiconTextStyleId
+
         }
 
         nodes.push(text)
-        figma.currentPage.selection = nodes
-        figma.viewport.scrollAndZoomIntoView(nodes)
-
-      } else {
-
-        console.log('replace text object')
-
-        let selectionLength = figma.currentPage.selection.length
-
-        for (let i = 0; i < selectionLength; i++) {
-
-          // unload current font
-          let selection = <TextNode>figma.currentPage.selection[i]
-          let currentFontName = selection.fontName
-          await figma.loadFontAsync({ family: `${currentFontName['family']}`, style: `${currentFontName['style']}` });
-
-          let currentFont = <String>currentFontName['family']
-          let text = <TextNode>selection
-          text.characters = msg.glyph
-
-          if (msg.library == 'seti') {
-            if (hasAccess) {
-              if (currentFont !== 'seti'){
-                text.textStyleId = setiTextStyleId
-              }
-            } else {
-              text.name = 'seti: ' + msg.name
-              text.fontName = { family: "seti", style: "Regular" }
-            }
-          }
-          
-          if (msg.library == 'codicon') {
-            if (hasAccess) {
-              if(currentFont !== 'codicon'){
-                text.textStyleId = codiconTextStyleId
-              }
-            } else {
-              text.name = 'codicon: ' + msg.name
-              text.fontName = { family: "codicon", style: "Regular" }
-            }
-          }
-
-          nodes.push(text)
-
-        }
-
-        figma.currentPage.selection = nodes
 
       }
+
+      figma.currentPage.selection = nodes
+
     }
   }
-});
+}

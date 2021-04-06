@@ -11,95 +11,81 @@ const setiIcons = seti['default']
 let loadCodicons = false
 let loadSeti = false
 
+// load codicons
+loadCodicons = true
+console.log('load codicons')
+codicons.forEach((icon: {
+  short_name: string,
+  character: string,
+  unicode: string,
+  description: string,
+}) => {
+  let iconListItem = document.createElement('li')
+  let iconName = icon.short_name
+  let iconFriendlyName = icon.short_name.replace(/-/g, ' ')
+  let iconDescription = icon.description
+  let iconGlyph = icon.character
+  iconListItem.setAttribute('icon-glyph', iconGlyph)
+  iconListItem.setAttribute('icon-name', iconName)
+  iconListItem.setAttribute('icon-library', 'codicon')
+
+  iconListItem.innerHTML += `<glyph>${iconGlyph}</glyph>`
+  iconListItem.innerHTML += `<metadata> ${iconFriendlyName} codicon ${iconDescription} </metadata>`
+
+  iconList.appendChild(iconListItem)
+})
+
+// load seti
+loadSeti = true
+setiIcons.forEach((icon: {
+  short_name: string,
+  character: string,
+  unicode: string,
+  description: string,
+}) => {
+  let iconListItem = document.createElement('li')
+  let iconName = icon.short_name
+  let iconFriendlyName = icon.short_name.replace(/-/g, ' ')
+  let iconDescription = icon.description
+  let iconGlyph = icon.character
+  iconListItem.setAttribute('icon-glyph', iconGlyph)
+  iconListItem.setAttribute('icon-name', iconName)
+  iconListItem.setAttribute('icon-library', 'seti')
+
+  iconListItem.innerHTML += `<glyph>${iconGlyph}</glyph>`
+  iconListItem.innerHTML += `<metadata> ${iconFriendlyName} seti ${iconDescription} </metadata>`
+
+  iconList.appendChild(iconListItem)
+})
+
 onmessage = (event) => {
-
   const pluginMessage = event.data.pluginMessage
-  
-  if (pluginMessage.font == 'codicons' && pluginMessage.missing == true) {
-    console.log('no codicons')
-    bannerCodicon.classList.add('show');
-  } else if (pluginMessage.font == 'codicons' && pluginMessage.missing == false) {
-    loadCodicons = true
-    console.log('load codicons')
-    codicons.forEach((icon: {
-      short_name: string,
-      character: string,
-      unicode: string,
-      description: string,
-    }) => {
-      let iconListItem = document.createElement('li')
-      let iconName = icon.short_name
-      let iconFriendlyName = icon.short_name.replace(/-/g, ' ')
-      let iconDescription = icon.description
-      let iconGlyph = icon.character
-      iconListItem.setAttribute('icon-glyph', iconGlyph)
-      iconListItem.setAttribute('icon-name', iconName)
-      iconListItem.setAttribute('icon-library', 'codicon')
 
-      iconListItem.innerHTML += `<glyph>${iconGlyph}</glyph>`
-      iconListItem.innerHTML += `<metadata> ${iconFriendlyName} codicon ${iconDescription} </metadata>`
-
-      iconList.appendChild(iconListItem)
-    })
-  }
-
-  if (pluginMessage.font == 'seti' && pluginMessage.missing == true) {
-    bannerSeti.classList.add('show');
-  } else if (pluginMessage.font == 'seti' && pluginMessage.missing == false) {
-    loadSeti = true
-    setiIcons.forEach((icon: {
-      short_name: string,
-      character: string,
-      unicode: string,
-      description: string,
-    }) => {
-      let iconListItem = document.createElement('li')
-      let iconName = icon.short_name
-      let iconFriendlyName = icon.short_name.replace(/-/g, ' ')
-      let iconDescription = icon.description
-      let iconGlyph = icon.character
-      iconListItem.setAttribute('icon-glyph', iconGlyph)
-      iconListItem.setAttribute('icon-name', iconName)
-      iconListItem.setAttribute('icon-library', 'seti')
-
-      iconListItem.innerHTML += `<glyph>${iconGlyph}</glyph>`
-      iconListItem.innerHTML += `<metadata> ${iconFriendlyName} seti ${iconDescription} </metadata>`
-
-      iconList.appendChild(iconListItem)
-    })
-  }
-
-  if (loadCodicons || loadSeti) {
-
-    function sanitizeText(string) {
-      return string = string.replace(/-/gi, ' ');
-    }
-
-    search.addEventListener('keyup', function () {
-      let filter = search.value.toUpperCase();
-      let wrapper = document.getElementById('icon-list');
-      let icon = iconList.getElementsByTagName('li');
-
-      for (let i = 0; i < icon.length; i++) {
-        let textInner = sanitizeText(icon[i].innerText)
-        let textContents = sanitizeText(icon[i].textContent);
-        let compareText = textContents || textInner;
-
-        if (compareText.toUpperCase().indexOf(filter) > -1) {
-          icon[i].style.display = '';
-        } else {
-          icon[i].style.display = 'none';
-        }
-      }
-    });
-
-    search.focus();
-
-    
-  } else {
-    search.classList.add('disabled')
-  }
 }
+
+function sanitizeText(string) {
+  return string = string.replace(/-/gi, ' ');
+}
+
+search.addEventListener('keyup', function () {
+  let filter = search.value.toUpperCase();
+  let wrapper = document.getElementById('icon-list');
+  let icon = iconList.getElementsByTagName('li');
+
+  for (let i = 0; i < icon.length; i++) {
+    let textInner = sanitizeText(icon[i].innerText)
+    let textContents = sanitizeText(icon[i].textContent);
+    let compareText = textContents || textInner;
+
+    if (compareText.toUpperCase().indexOf(filter) > -1) {
+      icon[i].style.display = '';
+    } else {
+      icon[i].style.display = 'none';
+    }
+  }
+});
+
+search.focus();
 
 iconList.addEventListener('click', function (e) {
 
