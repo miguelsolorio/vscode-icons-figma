@@ -1,4 +1,4 @@
-figma.showUI(__html__, { width: 350, height: 450 })
+figma.showUI(__html__, { width: 380, height: 480 })
 
 const codiconTextStyleKey = '640604ee4b4f01ff327acfaaa8305c92199c7473'
 const codiconTextStyleId = 'S:640604ee4b4f01ff327acfaaa8305c92199c7473,2712:14'
@@ -86,25 +86,28 @@ figma.ui.onmessage = async msg => {
         let text = <TextNode>selection
         text.characters = msg.glyph
 
-        if (msg.library == 'seti') {
+        if (msg.library == 'codicon' || msg.library == 'seti') {
 
-          text.name = 'seti: ' + msg.name
-          text.fontName = { family: "seti", style: "Regular" }
+          // override styles if not codicon
+          if (currentFont !== 'codicon') {
+            text.name = 'codicon: ' + msg.name
+            text.fontName = { family: "codicon", style: "Regular" }
 
-          await figma.importStyleByKeyAsync(setiTextStyleKey)
-          await figma.importStyleByKeyAsync(setiColorStyleKey)
-          text.textStyleId = setiTextStyleId
+            await figma.importStyleByKeyAsync(codiconTextStyleKey)
+            await figma.importStyleByKeyAsync(codiconColorStyleKey)
+            text.textStyleId = codiconTextStyleId
 
-        }
+          }
 
-        if (msg.library == 'codicon') {
+          // override styles if not seti
+          if (currentFont !== 'seti') {
+            text.name = 'seti: ' + msg.name
+            text.fontName = { family: "seti", style: "Regular" }
 
-          text.name = 'codicon: ' + msg.name
-          text.fontName = { family: "codicon", style: "Regular" }
-
-          await figma.importStyleByKeyAsync(codiconTextStyleKey)
-          await figma.importStyleByKeyAsync(codiconColorStyleKey)
-          text.textStyleId = codiconTextStyleId
+            await figma.importStyleByKeyAsync(setiTextStyleKey)
+            await figma.importStyleByKeyAsync(setiColorStyleKey)
+            text.textStyleId = setiTextStyleId
+          }
 
         }
 
