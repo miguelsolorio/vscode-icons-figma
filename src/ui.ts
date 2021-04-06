@@ -25,6 +25,7 @@ codicons.forEach((icon: {
   let iconFriendlyName = icon.short_name.replace(/-/g, ' ')
   let iconDescription = icon.description
   let iconGlyph = icon.character
+  iconListItem.id = iconName
   iconListItem.setAttribute('icon-glyph', iconGlyph)
   iconListItem.setAttribute('icon-name', iconName)
   iconListItem.setAttribute('icon-library', 'codicon')
@@ -48,6 +49,7 @@ setiIcons.forEach((icon: {
   let iconFriendlyName = icon.short_name.replace(/-/g, ' ')
   let iconDescription = icon.description
   let iconGlyph = icon.character
+  iconListItem.id = iconName
   iconListItem.setAttribute('icon-glyph', iconGlyph)
   iconListItem.setAttribute('icon-name', iconName)
   iconListItem.setAttribute('icon-library', 'seti')
@@ -68,21 +70,30 @@ function sanitizeText(string) {
 }
 
 search.addEventListener('keyup', function () {
+  let searchInput = this.value.toString();
   let filter = search.value.toUpperCase();
   let wrapper = document.getElementById('icon-list');
   let icon = iconList.getElementsByTagName('li');
-
-  for (let i = 0; i < icon.length; i++) {
-    let textInner = sanitizeText(icon[i].innerText)
-    let textContents = sanitizeText(icon[i].textContent);
-    let compareText = textContents || textInner;
-
-    if (compareText.toUpperCase().indexOf(filter) > -1) {
-      icon[i].style.display = '';
-    } else {
-      icon[i].style.display = 'none';
+  
+  document.querySelectorAll('li').forEach(item => {
+    if(!item.classList.contains('hide')){
+      item.classList.add('hide')
     }
-  }
+  })
+
+  const codiconFilter = codicons.filter(icon => (icon.description.includes(searchInput) || icon.short_name.includes(searchInput)))
+  const setiFilter = setiIcons.filter(icon => (icon.description.includes(searchInput) || icon.short_name.includes(searchInput)))
+  
+  codiconFilter.forEach(result => {
+    let name = result['short_name']
+    document.getElementById(`${name}`).classList.remove('hide')
+  })
+
+  setiFilter.forEach(result => {
+    let name = result['short_name']
+    document.getElementById(`${name}`).classList.remove('hide')
+  })
+
 });
 
 search.focus();
