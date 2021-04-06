@@ -3,17 +3,15 @@ import './ui.css'
 const codicon = require('./assets/codicon.json5')
 const seti = require('./assets/seti.json5')
 const search = <HTMLInputElement>document.getElementById('search')
+const banner = <HTMLElement>document.getElementById('banner')
+const bannerBoth = <HTMLElement>document.getElementById('banner-both')
 const bannerCodicon = <HTMLElement>document.getElementById('banner-codicon')
 const bannerSeti = <HTMLElement>document.getElementById('banner-seti')
 const iconList = document.getElementById('icon-list')
 const codicons = codicon['default']
 const setiIcons = seti['default']
-let loadCodicons = false
-let loadSeti = false
 
 // load codicons
-loadCodicons = true
-console.log('load codicons')
 codicons.forEach((icon: {
   short_name: string,
   character: string,
@@ -37,7 +35,6 @@ codicons.forEach((icon: {
 })
 
 // load seti
-loadSeti = true
 setiIcons.forEach((icon: {
   short_name: string,
   character: string,
@@ -63,18 +60,26 @@ setiIcons.forEach((icon: {
 onmessage = (event) => {
   const pluginMessage = event.data.pluginMessage
 
-}
+  
+  if (pluginMessage.type == 'hasIcons'){
+    console.log(pluginMessage)
+    banner.classList.remove('hide')
 
-function sanitizeText(string) {
-  return string = string.replace(/-/gi, ' ');
+    if (pluginMessage.codicons == false){
+      banner.classList.add('codicons')
+      bannerCodicon.classList.remove('hide')
+    }
+
+    if (pluginMessage.seti == false) {
+      banner.classList.add('seti')
+      bannerSeti.classList.remove('hide')
+    }
+  }
+
 }
 
 search.addEventListener('keyup', function () {
   let searchInput = this.value.toString();
-  let filter = search.value.toUpperCase();
-  let wrapper = document.getElementById('icon-list');
-  let icon = iconList.getElementsByTagName('li');
-  
   document.querySelectorAll('li').forEach(item => {
     if(!item.classList.contains('hide')){
       item.classList.add('hide')

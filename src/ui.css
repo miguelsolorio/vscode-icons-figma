@@ -27,18 +27,34 @@ body {
   display: none;
 }
 
-.banner {
-  display: none;
+#banner:not(.hide) {
   padding: 8px;
-  font-size: 14px;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  margin: 0;
   color: white;
-  /* border: 1px solid#BE1100; */
-  margin: 0px 8px 8px;
-  /* background-color: #5A1D1D; */
+  border: 1px solid #CF0000;
+  background-color: #62171A;
 }
 
-.banner a {
-  display: block;
+#banner .both {
+  display: none;
+}
+
+#banner.seti.codicons .both{
+  display: inline-block;
+}
+#banner svg {
+  align-self: flex-start;
+  width: 16x;
+  height: 16px;
+  margin-right: 6px;
+}
+
+#banner a {
+  color: white;
+  /* display: block;
   text-align: center;
   text-decoration: none;
   padding: 8px;
@@ -46,11 +62,11 @@ body {
   color: white;
   margin-top: 8px;
   border-radius: 4px;
-  background-color: #007aff;
+  background-color: #007aff; */
 }
 
 .banner a:hover {
-  background-color: #2990ff;
+  /* background-color: #2990ff; */
 }
 
 .banner.show {

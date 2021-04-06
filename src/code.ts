@@ -14,11 +14,24 @@ const nodes: SceneNode[] = [];
 const data = require('./assets/codicon.json5')
 const icons = data['default']
 
-// load roboto
-figma.loadFontAsync({ family: "Roboto", style: "Regular" })
-figma.loadFontAsync({ family: "codicon", style: "Regular" })
-figma.loadFontAsync({ family: "seti", style: "Regular" })
-figma.importStyleByKeyAsync(codiconTextStyleKey)
+// load fonts
+async function loadFonts(){
+  await figma.loadFontAsync({ family: "Roboto", style: "Regular" })
+  await figma.loadFontAsync({ family: "codicon", style: "Regular" }).catch(e => {
+    console.log(e)
+    figma.ui.postMessage({ type: 'hasIcons', codicons: false })
+    return false;
+  })
+  await figma.loadFontAsync({ family: "seti", style: "Regular" }).catch(e => {
+    console.log(e)
+    figma.ui.postMessage({ type: 'hasIcons', seti: false })
+    return false;
+  })
+  await figma.importStyleByKeyAsync(codiconTextStyleKey).catch(e => {
+    console.log(e)
+  })
+}
+loadFonts()
 
 figma.ui.onmessage = async msg => {
 
