@@ -29,6 +29,7 @@ codicons.forEach((icon: {
   iconListItem.setAttribute('icon-library', 'codicon')
 
   iconListItem.innerHTML += `<glyph>${iconGlyph}</glyph>`
+  iconListItem.innerHTML += `<name>${iconFriendlyName}</name>`
   iconListItem.innerHTML += `<metadata> ${iconFriendlyName} codicon ${iconDescription} </metadata>`
 
   iconList.appendChild(iconListItem)
@@ -52,6 +53,7 @@ setiIcons.forEach((icon: {
   iconListItem.setAttribute('icon-library', 'seti')
 
   iconListItem.innerHTML += `<glyph>${iconGlyph}</glyph>`
+  iconListItem.innerHTML += `<name>${iconFriendlyName}</name>`
   iconListItem.innerHTML += `<metadata> ${iconFriendlyName} seti ${iconDescription} </metadata>`
 
   iconList.appendChild(iconListItem)
