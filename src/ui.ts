@@ -2,7 +2,7 @@ import './ui.css'
 
 const codicon = require('./assets/codicon.json5')
 const seti = require('./assets/seti.json5')
-const search = <HTMLInputElement>document.getElementById('search')
+const search = <HTMLInputElement>document.getElementById('search-input')
 const banner = <HTMLElement>document.getElementById('banner')
 const bannerBoth = <HTMLElement>document.getElementById('banner-both')
 const bannerCodicon = <HTMLElement>document.getElementById('banner-codicon')
@@ -80,6 +80,7 @@ onmessage = (event) => {
 
 search.addEventListener('keyup', function () {
   let searchInput = this.value.toString();
+
   document.querySelectorAll('li').forEach(item => {
     if(!item.classList.contains('hide')){
       item.classList.add('hide')
@@ -88,16 +89,26 @@ search.addEventListener('keyup', function () {
 
   const codiconFilter = codicons.filter(icon => (icon.description.includes(searchInput) || icon.short_name.includes(searchInput)))
   const setiFilter = setiIcons.filter(icon => (icon.description.includes(searchInput) || icon.short_name.includes(searchInput)))
-  
+
   codiconFilter.forEach(result => {
     let name = result['short_name']
-    document.getElementById(`${name}`).classList.remove('hide')
+    let item = document.querySelectorAll(`li[icon-name="${name}"]`);
+    item.forEach(element => {
+      element.classList.remove('hide')
+    })
+    // document.getElementById(`${name}`).classList.remove('hide')
   })
 
   setiFilter.forEach(result => {
     let name = result['short_name']
-    document.getElementById(`${name}`).classList.remove('hide')
+    let item = document.querySelectorAll(`li[icon-name="${name}"]`);
+    item.forEach(element => {
+      element.classList.remove('hide')
+    })
+    // document.getElementById(`${name}`).classList.remove('hide')
   })
+
+  // console.log(searchInput.length)
 
 });
 

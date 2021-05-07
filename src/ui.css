@@ -115,23 +115,23 @@ metadata {
   display: none;
 }
 
-#search {
+#search-input {
   margin: 12px 8px 8px;
   padding: 8px;
   outline: none;
   border: 2px solid #E5E5E5;
 }
 
-#search.disabled {
+#search-input.disabled {
   opacity: .4;
   pointer-events: none;
 }
 
-#search::placeholder{
+#search-input::placeholder{
   color: #b3b3b3; 
 }
 
-#search:focus {
+#search-input:focus {
   border: 2px solid #007fd4;
 }
 
@@ -147,11 +147,11 @@ metadata {
   li:hover {
   background-color: rgba(255,255,255,.08);
   }
-  #search {
+  #search-input {
     background-color: #3C3C3C;
     border-color: transparent;
   }
-  #search::placeholder{
+  #search-input::placeholder{
     color: #A6A6A6; 
   }
 }

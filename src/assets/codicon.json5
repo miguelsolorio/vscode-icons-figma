@@ -2086,5 +2086,83 @@
     "character": "",
     "unicode": "EB82",
     "description": ""
+  },
+  {
+    "short_name": "terminal-cmd",
+    "character": "",
+    "unicode": "ebc4",
+    "description": ""
+  },
+  {
+    "short_name": "terminal-debian",
+    "character": "",
+    "unicode": "ebc5",
+    "description": ""
+  },
+  {
+    "short_name": "terminal-linux",
+    "character": "",
+    "unicode": "ebc6",
+    "description": ""
+  },
+  {
+    "short_name": "terminal-powershell",
+    "character": "",
+    "unicode": "ebc7",
+    "description": ""
+  },
+  {
+    "short_name": "terminal-tmux",
+    "character": "",
+    "unicode": "ebc8",
+    "description": ""
+  },
+  {
+    "short_name": "terminal-ubuntu",
+    "character": "",
+    "unicode": "ebc9",
+    "description": ""
+  },
+  {
+    "short_name": "terminal-bash",
+    "character": "",
+    "unicode": "ebca",
+    "description": ""
+  },
+  {
+    "short_name": "arrow-swap",
+    "character": "",
+    "unicode": "ebcb",
+    "description": ""
+  },
+  {
+    "short_name": "copy",
+    "character": "",
+    "unicode": "ebcc",
+    "description": ""
+  },
+  {
+    "short_name": "person-add",
+    "character": "",
+    "unicode": "ebcd",
+    "description": ""
+  },
+  {
+    "short_name": "filter-filled",
+    "character": "",
+    "unicode": "ebce",
+    "description": ""
+  },
+  {
+    "short_name": "wand",
+    "character": "",
+    "unicode": "ebcf",
+    "description": ""
+  },
+  {
+    "short_name": "debug-line-by-line",
+    "character": "",
+    "unicode": "ebd0",
+    "description": ""
   }
 ]
