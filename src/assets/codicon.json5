@@ -681,55 +681,55 @@
     "short_name": "file-binary",
     "character": "",
     "unicode": "EAE8",
-    "description": ""
+    "description": "document page"
   },
   {
     "short_name": "file-code",
     "character": "",
     "unicode": "EAE9",
-    "description": ""
+    "description": "document page"
   },
   {
     "short_name": "file-media",
     "character": "",
     "unicode": "EAEA",
-    "description": ""
+    "description": "document page"
   },
   {
     "short_name": "file-pdf",
     "character": "",
     "unicode": "EAEB",
-    "description": ""
+    "description": "document page"
   },
   {
     "short_name": "file-submodule",
     "character": "",
     "unicode": "EAEC",
-    "description": ""
+    "description": "document page"
   },
   {
     "short_name": "file-symlink-directory",
     "character": "",
     "unicode": "EAED",
-    "description": ""
+    "description": "document page"
   },
   {
     "short_name": "file-symlink-file",
     "character": "",
     "unicode": "EAEE",
-    "description": ""
+    "description": "document page"
   },
   {
     "short_name": "file-zip",
     "character": "",
     "unicode": "EAEF",
-    "description": ""
+    "description": "document page"
   },
   {
     "short_name": "file",
     "character": "",
     "unicode": "EA7B",
-    "description": "page"
+    "description": "document page"
   },
   {
     "short_name": "files",
@@ -741,25 +741,25 @@
     "short_name": "filter",
     "character": "",
     "unicode": "EAF1",
-    "description": ""
+    "description": "funnel"
   },
   {
     "short_name": "flame",
     "character": "",
     "unicode": "EAF2",
-    "description": ""
+    "description": "fire trend heat hot"
   },
   {
     "short_name": "fold-down",
     "character": "",
     "unicode": "EAF3",
-    "description": ""
+    "description": "collapse"
   },
   {
     "short_name": "fold-up",
     "character": "",
     "unicode": "EAF4",
-    "description": ""
+    "description": "expand"
   },
   {
     "short_name": "fold",
@@ -789,13 +789,13 @@
     "short_name": "gear",
     "character": "",
     "unicode": "EAF8",
-    "description": ""
+    "description": "settings cog"
   },
   {
     "short_name": "gift",
     "character": "",
     "unicode": "EAF9",
-    "description": ""
+    "description": "feature box present"
   },
   {
     "short_name": "gist-secret",
