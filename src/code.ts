@@ -43,73 +43,54 @@ figma.ui.onmessage = async msg => {
     if (figma.currentPage.selection.length == 0) {
 
       console.log('creating new text object')
-      const text: TextNode = figma.createText()
-      text.characters = msg.glyph
-      text.fontSize = 16
-
-      if (msg.library == 'seti') {
-        text.name = 'seti: ' + msg.name
-        text.fontName = { family: "seti", style: "Regular" }
-
-        await figma.importStyleByKeyAsync(setiTextStyleKey)
-        await figma.importStyleByKeyAsync(setiColorStyleKey)
-        text.textStyleId = setiTextStyleId
-        text.fillStyleId = setiColorStyleId
-      } if (msg.library == 'codicon') {
-        text.name = 'codicon: ' + msg.name
-        text.fontName = { family: "codicon", style: "Regular" }
-
-        await figma.importStyleByKeyAsync(codiconTextStyleKey)
-        await figma.importStyleByKeyAsync(codiconColorStyleKey)
-        text.textStyleId = codiconTextStyleId
-        text.fillStyleId = codiconColorStyleId
-      }
-
-      nodes.push(text)
+      await createNewIconObject(msg, nodes)
+      
       figma.currentPage.selection = nodes
-      figma.viewport.scrollAndZoomIntoView(nodes)
 
     } else {
 
       console.log('replace text object')
-
       let selectionLength = figma.currentPage.selection.length
 
       for (let i = 0; i < selectionLength; i++) {
 
-        // unload current font
-        let selection = <TextNode>figma.currentPage.selection[i]
-        let currentFontName = selection.fontName
-        await figma.loadFontAsync({ family: `${currentFontName['family']}`, style: `${currentFontName['style']}` });
+        if(figma.currentPage.selection[i].type != 'TEXT'){
+          await createNewIconObject(msg, nodes)
+        } else {
+          // unload current font
+          let selection = <TextNode>figma.currentPage.selection[i]
+          let currentFontName = selection.fontName
+          await figma.loadFontAsync({ family: `${currentFontName['family']}`, style: `${currentFontName['style']}` });
 
-        let currentFont = <String>currentFontName['family']
-        let text = <TextNode>selection
-        text.characters = msg.glyph
+          let currentFont = <String>currentFontName['family']
+          let text = <TextNode>selection
+          text.characters = msg.glyph
 
 
-        // override styles if not codicon
-        if (msg.library == 'codicon' && currentFont !== 'codicon') {
-          text.name = 'codicon: ' + msg.name
-          text.fontName = { family: "codicon", style: "Regular" }
+          // override styles if not codicon
+          if (msg.library == 'codicon' && currentFont !== 'codicon') {
+            text.name = 'codicon: ' + msg.name
+            text.fontName = { family: "codicon", style: "Regular" }
 
-          await figma.importStyleByKeyAsync(codiconTextStyleKey)
-          await figma.importStyleByKeyAsync(codiconColorStyleKey)
-          text.textStyleId = codiconTextStyleId
+            await figma.importStyleByKeyAsync(codiconTextStyleKey)
+            await figma.importStyleByKeyAsync(codiconColorStyleKey)
+            text.textStyleId = codiconTextStyleId
 
+          }
+
+          // override styles if not seti
+          if (msg.library == 'seti' && currentFont !== 'seti') {
+            text.name = 'seti: ' + msg.name
+            text.fontName = { family: "seti", style: "Regular" }
+
+            await figma.importStyleByKeyAsync(setiTextStyleKey)
+            await figma.importStyleByKeyAsync(setiColorStyleKey)
+            text.textStyleId = setiTextStyleId
+          }
+
+          nodes.push(text)
         }
 
-        // override styles if not seti
-        if (msg.library == 'seti' && currentFont !== 'seti') {
-          text.name = 'seti: ' + msg.name
-          text.fontName = { family: "seti", style: "Regular" }
-
-          await figma.importStyleByKeyAsync(setiTextStyleKey)
-          await figma.importStyleByKeyAsync(setiColorStyleKey)
-          text.textStyleId = setiTextStyleId
-        }
-
-
-        nodes.push(text)
 
       }
 
@@ -118,3 +99,31 @@ figma.ui.onmessage = async msg => {
     }
   }
 }
+async function createNewIconObject(msg: any, nodes: any[]) {
+  const text: TextNode = figma.createText()
+  text.characters = msg.glyph
+  text.fontSize = 16
+  text.x = figma.viewport.center.x
+  text.y = figma.viewport.center.y
+
+  if (msg.library == 'seti') {
+    text.name = 'seti: ' + msg.name
+    text.fontName = { family: "seti", style: "Regular" }
+
+    await figma.importStyleByKeyAsync(setiTextStyleKey)
+    await figma.importStyleByKeyAsync(setiColorStyleKey)
+    text.textStyleId = setiTextStyleId
+    text.fillStyleId = setiColorStyleId
+  } if (msg.library == 'codicon') {
+    text.name = 'codicon: ' + msg.name
+    text.fontName = { family: "codicon", style: "Regular" }
+
+    await figma.importStyleByKeyAsync(codiconTextStyleKey)
+    await figma.importStyleByKeyAsync(codiconColorStyleKey)
+    text.textStyleId = codiconTextStyleId
+    text.fillStyleId = codiconColorStyleId
+  }
+
+  return nodes.push(text)
+}
+
