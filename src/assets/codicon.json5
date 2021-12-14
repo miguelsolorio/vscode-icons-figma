@@ -2164,5 +2164,173 @@
     "character": "",
     "unicode": "ebd0",
     "description": ""
+  },
+  {
+    "short_name": "azure",
+    "character": "",
+    "unicode": "EBD8",
+    "description": ""
+  },
+  {
+    "short_name": "beaker-stop",
+    "character": "",
+    "unicode": "EBE1",
+    "description": ""
+  },
+  {
+    "short_name": "bracket-dot",
+    "character": "",
+    "unicode": "EBE5",
+    "description": ""
+  },
+  {
+    "short_name": "bracket-error",
+    "character": "",
+    "unicode": "EBE6",
+    "description": ""
+  },
+  {
+    "short_name": "compass-active",
+    "character": "",
+    "unicode": "EBD7",
+    "description": ""
+  },
+  {
+    "short_name": "compass-dot",
+    "character": "",
+    "unicode": "EBD6",
+    "description": ""
+  },
+  {
+    "short_name": "compass",
+    "character": "",
+    "unicode": "EBD5",
+    "description": ""
+  },
+  {
+    "short_name": "debug-all",
+    "character": "",
+    "unicode": "EBDC",
+    "description": ""
+  },
+  {
+    "short_name": "debug-continue-small",
+    "character": "",
+    "unicode": "EBE0",
+    "description": ""
+  },
+  {
+    "short_name": "debug-coverage",
+    "character": "",
+    "unicode": "EBDD",
+    "description": ""
+  },
+  {
+    "short_name": "folder-library",
+    "character": "",
+    "unicode": "EBDF",
+    "description": ""
+  },
+  {
+    "short_name": "git-pull-request-closed",
+    "character": "",
+    "unicode": "EBDA",
+    "description": ""
+  },
+  {
+    "short_name": "git-pull-request-draft",
+    "character": "",
+    "unicode": "EBDB",
+    "description": ""
+  },
+  {
+    "short_name": "graph-line",
+    "character": "",
+    "unicode": "EBE2",
+    "description": ""
+  },
+  {
+    "short_name": "graph-scatter",
+    "character": "",
+    "unicode": "EBE3",
+    "description": ""
+  },
+  {
+    "short_name": "inspect",
+    "character": "",
+    "unicode": "EBD1",
+    "description": ""
+  },
+  {
+    "short_name": "issue-draft",
+    "character": "",
+    "unicode": "EBD9",
+    "description": ""
+  },
+  {
+    "short_name": "issue-closed",
+    "character": "",
+    "unicode": "EB0A",
+    "description": ""
+  },
+  {
+    "short_name": "layers-active",
+    "character": "",
+    "unicode": "EBD4",
+    "description": ""
+  },
+  {
+    "short_name": "layers-dot",
+    "character": "",
+    "unicode": "EBD3",
+    "description": ""
+  },
+  {
+    "short_name": "layers",
+    "character": "",
+    "unicode": "EBD2",
+    "description": ""
+  },
+  {
+    "short_name": "pie-chart",
+    "character": "",
+    "unicode": "EBE4",
+    "description": ""
+  },
+  {
+    "short_name": "run-errors",
+    "character": "",
+    "unicode": "EBDE",
+    "description": ""
+  },
+  {
+    "short_name": "azure-devops",
+    "character": "",
+    "unicode": "EBE8",
+    "description": ""
+  },
+  {
+    "short_name": "lock-small",
+    "character": "",
+    "unicode": "EBE7",
+    "description": ""
+  },
+  {
+    "short_name": "verified-filled",
+    "character": "",
+    "unicode": "EBE9",
+    "description": ""
+  },
+  {
+    "short_name": "newline",
+    "character": "",
+    "unicode": "EBEA",
+    "description": ""
+  },
+  {
+    "short_name": "layout",
+    "character": "",
+    "unicode": "EBEB",
+    "description": ""
   }
 ]
