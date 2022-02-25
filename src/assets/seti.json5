@@ -3,924 +3,924 @@
     "short_name": "R",
     "character": "",
     "unicode": "E001",
-    "description": ""
+    "description": "seti"
   },
   {
     "short_name": "apple",
     "character": "",
     "unicode": "E002",
-    "description": ""
+    "description": "seti"
   },
   {
     "short_name": "argdown",
     "character": "",
     "unicode": "E003",
-    "description": ""
+    "description": "seti"
   },
   {
     "short_name": "asm",
     "character": "",
     "unicode": "E004",
-    "description": ""
+    "description": "seti"
   },
   {
     "short_name": "audio",
     "character": "",
     "unicode": "E005",
-    "description": ""
+    "description": "seti"
   },
   {
     "short_name": "babel",
     "character": "",
     "unicode": "E006",
-    "description": ""
+    "description": "seti"
   },
   {
     "short_name": "bicep",
     "character": "",
     "unicode": "E007",
-    "description": ""
+    "description": "seti"
   },
   {
     "short_name": "bower",
     "character": "",
     "unicode": "E008",
-    "description": ""
+    "description": "seti"
   },
   {
     "short_name": "bsl",
     "character": "",
     "unicode": "E009",
-    "description": ""
+    "description": "seti"
   },
   {
     "short_name": "c-sharp",
     "character": "",
     "unicode": "E00A",
-    "description": ""
+    "description": "seti"
   },
   {
     "short_name": "c",
     "character": "",
     "unicode": "E00B",
-    "description": ""
+    "description": "seti"
   },
   {
     "short_name": "cake",
     "character": "",
     "unicode": "E00C",
-    "description": ""
+    "description": "seti"
   },
   {
     "short_name": "cake_php",
     "character": "",
     "unicode": "E00D",
-    "description": ""
+    "description": "seti"
   },
   {
     "short_name": "checkbox-unchecked",
     "character": "",
     "unicode": "E00E",
-    "description": ""
+    "description": "seti"
   },
   {
     "short_name": "checkbox",
     "character": "",
     "unicode": "E00F",
-    "description": ""
+    "description": "seti"
   },
   {
     "short_name": "cjsx",
     "character": "",
     "unicode": "E010",
-    "description": ""
+    "description": "seti"
   },
   {
     "short_name": "clock",
     "character": "",
     "unicode": "E011",
-    "description": ""
+    "description": "seti"
   },
   {
     "short_name": "clojure",
     "character": "",
     "unicode": "E012",
-    "description": ""
+    "description": "seti"
   },
   {
     "short_name": "code-climate",
     "character": "",
     "unicode": "E013",
-    "description": ""
+    "description": "seti"
   },
   {
     "short_name": "code-search",
     "character": "",
     "unicode": "E014",
-    "description": ""
+    "description": "seti"
   },
   {
     "short_name": "coldfusion",
     "character": "",
     "unicode": "E017",
-    "description": ""
+    "description": "seti"
   },
   {
     "short_name": "config",
     "character": "",
     "unicode": "E018",
-    "description": ""
+    "description": "seti"
   },
   {
     "short_name": "cpp",
     "character": "",
     "unicode": "E019",
-    "description": ""
+    "description": "seti"
   },
   {
     "short_name": "crystal",
     "character": "",
     "unicode": "E01A",
-    "description": ""
+    "description": "seti"
   },
   {
     "short_name": "crystal_embedded",
     "character": "",
     "unicode": "E01B",
-    "description": ""
+    "description": "seti"
   },
   {
     "short_name": "css",
     "character": "",
     "unicode": "E01C",
-    "description": ""
+    "description": "seti"
   },
   {
     "short_name": "csv",
     "character": "",
     "unicode": "E01D",
-    "description": ""
+    "description": "seti"
   },
   {
     "short_name": "cu",
     "character": "",
     "unicode": "E01E",
-    "description": ""
+    "description": "seti"
   },
   {
     "short_name": "d",
     "character": "",
     "unicode": "E01F",
-    "description": ""
+    "description": "seti"
   },
   {
     "short_name": "dart",
     "character": "",
     "unicode": "E020",
-    "description": ""
+    "description": "seti"
   },
   {
     "short_name": "db",
     "character": "",
     "unicode": "E021",
-    "description": ""
+    "description": "seti"
   },
   {
     "short_name": "default",
     "character": "",
     "unicode": "E022",
-    "description": ""
+    "description": "seti"
   },
   {
     "short_name": "deprecation-cop",
     "character": "",
     "unicode": "E023",
-    "description": ""
+    "description": "seti"
   },
   {
     "short_name": "docker",
     "character": "",
     "unicode": "E024",
-    "description": ""
+    "description": "seti"
   },
   {
     "short_name": "editorconfig",
     "character": "",
     "unicode": "E025",
-    "description": ""
+    "description": "seti"
   },
   {
     "short_name": "ejs",
     "character": "",
     "unicode": "E026",
-    "description": ""
+    "description": "seti"
   },
   {
     "short_name": "elixir",
     "character": "",
     "unicode": "E027",
-    "description": ""
+    "description": "seti"
   },
   {
     "short_name": "elixir_script",
     "character": "",
     "unicode": "E028",
-    "description": ""
+    "description": "seti"
   },
   {
     "short_name": "elm",
     "character": "",
     "unicode": "E029",
-    "description": ""
+    "description": "seti"
   },
   {
     "short_name": "error",
     "character": "",
     "unicode": "E02A",
-    "description": ""
+    "description": "seti"
   },
   {
     "short_name": "eslint",
     "character": "",
     "unicode": "E02B",
-    "description": ""
+    "description": "seti"
   },
   {
     "short_name": "ethereum",
     "character": "",
     "unicode": "E02C",
-    "description": ""
+    "description": "seti"
   },
   {
     "short_name": "f-sharp",
     "character": "",
     "unicode": "E02D",
-    "description": ""
+    "description": "seti"
   },
   {
     "short_name": "favicon",
     "character": "",
     "unicode": "E02E",
-    "description": ""
+    "description": "seti"
   },
   {
     "short_name": "firebase",
     "character": "",
     "unicode": "E02F",
-    "description": ""
+    "description": "seti"
   },
   {
     "short_name": "firefox",
     "character": "",
     "unicode": "E030",
-    "description": ""
+    "description": "seti"
   },
   {
     "short_name": "folder",
     "character": "",
     "unicode": "E031",
-    "description": ""
+    "description": "seti"
   },
   {
     "short_name": "font",
     "character": "",
     "unicode": "E032",
-    "description": ""
+    "description": "seti"
   },
   {
     "short_name": "git",
     "character": "",
     "unicode": "E033",
-    "description": ""
+    "description": "seti"
   },
   {
     "short_name": "github",
     "character": "",
     "unicode": "E036",
-    "description": ""
+    "description": "seti"
   },
   {
     "short_name": "go",
     "character": "",
     "unicode": "E037",
-    "description": ""
+    "description": "seti"
   },
   {
     "short_name": "go2",
     "character": "",
     "unicode": "E038",
-    "description": ""
+    "description": "seti"
   },
   {
     "short_name": "godot",
     "character": "",
     "unicode": "E039",
-    "description": ""
+    "description": "seti"
   },
   {
     "short_name": "gradle",
     "character": "",
     "unicode": "E03A",
-    "description": ""
+    "description": "seti"
   },
   {
     "short_name": "grails",
     "character": "",
     "unicode": "E03B",
-    "description": ""
+    "description": "seti"
   },
   {
     "short_name": "graphql",
     "character": "",
     "unicode": "E03C",
-    "description": ""
+    "description": "seti"
   },
   {
     "short_name": "grunt",
     "character": "",
     "unicode": "E03D",
-    "description": ""
+    "description": "seti"
   },
   {
     "short_name": "gulp",
     "character": "",
     "unicode": "E03E",
-    "description": ""
+    "description": "seti"
   },
   {
     "short_name": "hacklang",
     "character": "",
     "unicode": "E03F",
-    "description": ""
+    "description": "seti"
   },
   {
     "short_name": "haml",
     "character": "",
     "unicode": "E040",
-    "description": ""
+    "description": "seti"
   },
   {
     "short_name": "happenings",
     "character": "",
     "unicode": "E041",
-    "description": ""
+    "description": "seti"
   },
   {
     "short_name": "haskell",
     "character": "",
     "unicode": "E042",
-    "description": ""
+    "description": "seti"
   },
   {
     "short_name": "haxe",
     "character": "",
     "unicode": "E043",
-    "description": ""
+    "description": "seti"
   },
   {
     "short_name": "heroku",
     "character": "",
     "unicode": "E044",
-    "description": ""
+    "description": "seti"
   },
   {
     "short_name": "hex",
     "character": "",
     "unicode": "E045",
-    "description": ""
+    "description": "seti"
   },
   {
     "short_name": "html",
     "character": "",
     "unicode": "E046",
-    "description": ""
+    "description": "seti"
   },
   {
     "short_name": "ignored",
     "character": "",
     "unicode": "E048",
-    "description": ""
+    "description": "seti"
   },
   {
     "short_name": "illustrator",
     "character": "",
     "unicode": "E049",
-    "description": ""
+    "description": "seti"
   },
   {
     "short_name": "image",
     "character": "",
     "unicode": "E04A",
-    "description": ""
+    "description": "seti"
   },
   {
     "short_name": "info",
     "character": "",
     "unicode": "E04B",
-    "description": ""
+    "description": "seti"
   },
   {
     "short_name": "ionic",
     "character": "",
     "unicode": "E04C",
-    "description": ""
+    "description": "seti"
   },
   {
     "short_name": "jade",
     "character": "",
     "unicode": "E04D",
-    "description": ""
+    "description": "seti"
   },
   {
     "short_name": "java",
     "character": "",
     "unicode": "E04E",
-    "description": ""
+    "description": "seti"
   },
   {
     "short_name": "javascript",
     "character": "",
     "unicode": "E04F",
-    "description": ""
+    "description": "seti"
   },
   {
     "short_name": "jenkins",
     "character": "",
     "unicode": "E050",
-    "description": ""
+    "description": "seti"
   },
   {
     "short_name": "jinja",
     "character": "",
     "unicode": "E051",
-    "description": ""
+    "description": "seti"
   },
   {
     "short_name": "json",
     "character": "",
     "unicode": "E053",
-    "description": ""
+    "description": "seti"
   },
   {
     "short_name": "julia",
     "character": "",
     "unicode": "E054",
-    "description": ""
+    "description": "seti"
   },
   {
     "short_name": "karma",
     "character": "",
     "unicode": "E055",
-    "description": ""
+    "description": "seti"
   },
   {
     "short_name": "kotlin",
     "character": "",
     "unicode": "E056",
-    "description": ""
+    "description": "seti"
   },
   {
     "short_name": "license",
     "character": "",
     "unicode": "E058",
-    "description": ""
+    "description": "seti"
   },
   {
     "short_name": "liquid",
     "character": "",
     "unicode": "E059",
-    "description": ""
+    "description": "seti"
   },
   {
     "short_name": "livescript",
     "character": "",
     "unicode": "E05A",
-    "description": ""
+    "description": "seti"
   },
   {
     "short_name": "lock",
     "character": "",
     "unicode": "E05B",
-    "description": ""
+    "description": "seti"
   },
   {
     "short_name": "lua",
     "character": "",
     "unicode": "E05C",
-    "description": ""
+    "description": "seti"
   },
   {
     "short_name": "makefile",
     "character": "",
     "unicode": "E05D",
-    "description": ""
+    "description": "seti"
   },
   {
     "short_name": "markdown",
     "character": "",
     "unicode": "E05E",
-    "description": ""
+    "description": "seti"
   },
   {
     "short_name": "maven",
     "character": "",
     "unicode": "E05F",
-    "description": ""
+    "description": "seti"
   },
   {
     "short_name": "mdo",
     "character": "",
     "unicode": "E060",
-    "description": ""
+    "description": "seti"
   },
   {
     "short_name": "mustache",
     "character": "",
     "unicode": "E061",
-    "description": ""
+    "description": "seti"
   },
   {
     "short_name": "new-file",
     "character": "",
     "unicode": "E062",
-    "description": ""
+    "description": "seti"
   },
   {
     "short_name": "nim",
     "character": "",
     "unicode": "E063",
-    "description": ""
+    "description": "seti"
   },
   {
     "short_name": "notebook",
     "character": "",
     "unicode": "E064",
-    "description": ""
+    "description": "seti"
   },
   {
     "short_name": "npm",
     "character": "",
     "unicode": "E065",
-    "description": ""
+    "description": "seti"
   },
   {
     "short_name": "npm_ignored",
     "character": "",
     "unicode": "E066",
-    "description": ""
+    "description": "seti"
   },
   {
     "short_name": "nunjucks",
     "character": "",
     "unicode": "E067",
-    "description": ""
+    "description": "seti"
   },
   {
     "short_name": "ocaml",
     "character": "",
     "unicode": "E068",
-    "description": ""
+    "description": "seti"
   },
   {
     "short_name": "odata",
     "character": "",
     "unicode": "E069",
-    "description": ""
+    "description": "seti"
   },
   {
     "short_name": "pddl",
     "character": "",
     "unicode": "E06A",
-    "description": ""
+    "description": "seti"
   },
   {
     "short_name": "pdf",
     "character": "",
     "unicode": "E06B",
-    "description": ""
+    "description": "seti"
   },
   {
     "short_name": "perl",
     "character": "",
     "unicode": "E06C",
-    "description": ""
+    "description": "seti"
   },
   {
     "short_name": "photoshop",
     "character": "",
     "unicode": "E06D",
-    "description": ""
+    "description": "seti"
   },
   {
     "short_name": "php",
     "character": "",
     "unicode": "E06E",
-    "description": ""
+    "description": "seti"
   },
   {
     "short_name": "plan",
     "character": "",
     "unicode": "E06F",
-    "description": ""
+    "description": "seti"
   },
   {
     "short_name": "platformio",
     "character": "",
     "unicode": "E070",
-    "description": ""
+    "description": "seti"
   },
   {
     "short_name": "powershell",
     "character": "",
     "unicode": "E071",
-    "description": ""
+    "description": "seti"
   },
   {
     "short_name": "prisma",
     "character": "",
     "unicode": "E072",
-    "description": ""
+    "description": "seti"
   },
   {
     "short_name": "project",
     "character": "",
     "unicode": "E073",
-    "description": ""
+    "description": "seti"
   },
   {
     "short_name": "prolog",
     "character": "",
     "unicode": "E074",
-    "description": ""
+    "description": "seti"
   },
   {
     "short_name": "pug",
     "character": "",
     "unicode": "E075",
-    "description": ""
+    "description": "seti"
   },
   {
     "short_name": "puppet",
     "character": "",
     "unicode": "E076",
-    "description": ""
+    "description": "seti"
   },
   {
     "short_name": "python",
     "character": "",
     "unicode": "E077",
-    "description": ""
+    "description": "seti"
   },
   {
     "short_name": "rails",
     "character": "",
     "unicode": "E078",
-    "description": ""
+    "description": "seti"
   },
   {
     "short_name": "react",
     "character": "",
     "unicode": "E079",
-    "description": ""
+    "description": "seti"
   },
   {
     "short_name": "reasonml",
     "character": "",
     "unicode": "E07A",
-    "description": ""
+    "description": "seti"
   },
   {
     "short_name": "rollup",
     "character": "",
     "unicode": "E07B",
-    "description": ""
+    "description": "seti"
   },
   {
     "short_name": "ruby",
     "character": "",
     "unicode": "E07C",
-    "description": ""
+    "description": "seti"
   },
   {
     "short_name": "rust",
     "character": "",
     "unicode": "E07D",
-    "description": ""
+    "description": "seti"
   },
   {
     "short_name": "salesforce",
     "character": "",
     "unicode": "E07E",
-    "description": ""
+    "description": "seti"
   },
   {
     "short_name": "sass",
     "character": "",
     "unicode": "E07F",
-    "description": ""
+    "description": "seti"
   },
   {
     "short_name": "sbt",
     "character": "",
     "unicode": "E080",
-    "description": ""
+    "description": "seti"
   },
   {
     "short_name": "scala",
     "character": "",
     "unicode": "E081",
-    "description": ""
+    "description": "seti"
   },
   {
     "short_name": "search",
     "character": "",
     "unicode": "E082",
-    "description": ""
+    "description": "seti"
   },
   {
     "short_name": "settings",
     "character": "",
     "unicode": "E083",
-    "description": ""
+    "description": "seti"
   },
   {
     "short_name": "shell",
     "character": "",
     "unicode": "E084",
-    "description": ""
+    "description": "seti"
   },
   {
     "short_name": "slim",
     "character": "",
     "unicode": "E085",
-    "description": ""
+    "description": "seti"
   },
   {
     "short_name": "smarty",
     "character": "",
     "unicode": "E086",
-    "description": ""
+    "description": "seti"
   },
   {
     "short_name": "spring",
     "character": "",
     "unicode": "E087",
-    "description": ""
+    "description": "seti"
   },
   {
     "short_name": "stylelint",
     "character": "",
     "unicode": "E088",
-    "description": ""
+    "description": "seti"
   },
   {
     "short_name": "stylus",
     "character": "",
     "unicode": "E089",
-    "description": ""
+    "description": "seti"
   },
   {
     "short_name": "sublime",
     "character": "",
     "unicode": "E08A",
-    "description": ""
+    "description": "seti"
   },
   {
     "short_name": "svelte",
     "character": "",
     "unicode": "E08B",
-    "description": ""
+    "description": "seti"
   },
   {
     "short_name": "svg",
     "character": "",
     "unicode": "E08C",
-    "description": ""
+    "description": "seti"
   },
   {
     "short_name": "swift",
     "character": "",
     "unicode": "E08D",
-    "description": ""
+    "description": "seti"
   },
   {
     "short_name": "terraform",
     "character": "",
     "unicode": "E08E",
-    "description": ""
+    "description": "seti"
   },
   {
     "short_name": "tex",
     "character": "",
     "unicode": "E08F",
-    "description": ""
+    "description": "seti"
   },
   {
     "short_name": "todo",
     "character": "",
     "unicode": "E091",
-    "description": ""
+    "description": "seti"
   },
   {
     "short_name": "tsconfig",
     "character": "",
     "unicode": "E092",
-    "description": ""
+    "description": "seti"
   },
   {
     "short_name": "twig",
     "character": "",
     "unicode": "E093",
-    "description": ""
+    "description": "seti"
   },
   {
     "short_name": "typescript",
     "character": "",
     "unicode": "E094",
-    "description": ""
+    "description": "seti"
   },
   {
     "short_name": "vala",
     "character": "",
     "unicode": "E095",
-    "description": ""
+    "description": "seti"
   },
   {
     "short_name": "video",
     "character": "",
     "unicode": "E096",
-    "description": ""
+    "description": "seti"
   },
   {
     "short_name": "vue",
     "character": "",
     "unicode": "E097",
-    "description": ""
+    "description": "seti"
   },
   {
     "short_name": "wasm",
     "character": "",
     "unicode": "E098",
-    "description": ""
+    "description": "seti"
   },
   {
     "short_name": "wat",
     "character": "",
     "unicode": "E099",
-    "description": ""
+    "description": "seti"
   },
   {
     "short_name": "webpack",
     "character": "",
     "unicode": "E09A",
-    "description": ""
+    "description": "seti"
   },
   {
     "short_name": "wgt",
     "character": "",
     "unicode": "E09B",
-    "description": ""
+    "description": "seti"
   },
   {
     "short_name": "windows",
     "character": "",
     "unicode": "E09C",
-    "description": ""
+    "description": "seti"
   },
   {
     "short_name": "word",
     "character": "",
     "unicode": "E09D",
-    "description": ""
+    "description": "seti"
   },
   {
     "short_name": "xls",
     "character": "",
     "unicode": "E09E",
-    "description": ""
+    "description": "seti"
   },
   {
     "short_name": "xml",
     "character": "",
     "unicode": "E09F",
-    "description": ""
+    "description": "seti"
   },
   {
     "short_name": "yarn",
     "character": "",
     "unicode": "E0A0",
-    "description": ""
+    "description": "seti"
   },
   {
     "short_name": "yml",
     "character": "",
     "unicode": "E0A1",
-    "description": ""
+    "description": "seti"
   },
   {
     "short_name": "zip",
     "character": "",
     "unicode": "E0A2",
-    "description": ""
+    "description": "seti"
   }
 ]

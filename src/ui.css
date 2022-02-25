@@ -77,6 +77,7 @@ ul {
 
 li {
   display: flex;
+  position: relative;
   align-items: center;
   justify-content: center;
   flex-direction: column;
@@ -120,11 +121,15 @@ metadata {
 }
 
 #search-input::placeholder{
-  color: #b3b3b3; 
+  color: #b3b3b3;
 }
 
 #search-input:focus {
   border: 2px solid #007fd4;
+}
+
+li[icon-library="seti"] glyph {
+  color: #519ABA;
 }
 
 
@@ -144,6 +149,6 @@ metadata {
     border-color: transparent;
   }
   #search-input::placeholder{
-    color: #A6A6A6; 
+    color: #A6A6A6;
   }
 }

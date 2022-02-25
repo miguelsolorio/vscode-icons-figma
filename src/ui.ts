@@ -62,7 +62,7 @@ setiIcons.forEach((icon: {
 onmessage = (event) => {
   const pluginMessage = event.data.pluginMessage
 
-  
+
   if (pluginMessage.type == 'hasIcons'){
     console.log(pluginMessage)
     banner.classList.remove('hide')
@@ -91,7 +91,7 @@ search.addEventListener('keyup', function () {
 
   const codiconFilter = codicons.filter(icon => (icon.description.includes(searchInput) || (icon.short_name.replace(/-/g, ' ')).includes(searchInput)))
   const setiFilter = setiIcons.filter(icon => (icon.description.includes(searchInput) || (icon.short_name.replace(/-/g, ' ')).includes(searchInput)))
-  
+
   codiconFilter.forEach(result => {
     let name = result['short_name']
     let item = document.querySelectorAll(`li[icon-name="${name}"]`);
