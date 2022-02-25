@@ -2332,5 +2332,125 @@
     "character": "",
     "unicode": "EBEB",
     "description": ""
+  },
+  {
+    "short_name": "layout-activitybar-left",
+    "character": "",
+    "unicode": "EBEC",
+    "description": ""
+  },
+  {
+    "short_name": "layout-activitybar-right",
+    "character": "",
+    "unicode": "EBED",
+    "description": ""
+  },
+  {
+    "short_name": "layout-centered",
+    "character": "",
+    "unicode": "EBF7",
+    "description": ""
+  },
+  {
+    "short_name": "layout-menubar",
+    "character": "",
+    "unicode": "EBF6",
+    "description": ""
+  },
+  {
+    "short_name": "layout-panel-center",
+    "character": "",
+    "unicode": "EBEF",
+    "description": ""
+  },
+  {
+    "short_name": "layout-panel-justify",
+    "character": "",
+    "unicode": "EBF0",
+    "description": ""
+  },
+  {
+    "short_name": "layout-panel-left",
+    "character": "",
+    "unicode": "EBEE",
+    "description": ""
+  },
+  {
+    "short_name": "layout-panel-right",
+    "character": "",
+    "unicode": "EBF1",
+    "description": ""
+  },
+  {
+    "short_name": "layout-panel",
+    "character": "",
+    "unicode": "EBF2",
+    "description": ""
+  },
+  {
+    "short_name": "layout-sidebar-left",
+    "character": "",
+    "unicode": "EBF3",
+    "description": ""
+  },
+  {
+    "short_name": "layout-sidebar-right",
+    "character": "",
+    "unicode": "EBF4",
+    "description": ""
+  },
+  {
+    "short_name": "layout-statusbar",
+    "character": "",
+    "unicode": "EBF5",
+    "description": ""
+  },
+  {
+    "short_name": "target",
+    "character": "",
+    "unicode": "ebf8",
+    "description": ""
+  },
+  {
+    "short_name": "indent",
+    "character": "",
+    "unicode": "ebf9",
+    "description": ""
+  },
+  {
+    "short_name": "record-small",
+    "character": "",
+    "unicode": "ebfa",
+    "description": ""
+  },
+  {
+    "short_name": "error-small",
+    "character": "",
+    "unicode": "ebfb",
+    "description": ""
+  },
+  {
+    "short_name": "arrow-circle-down",
+    "character": "",
+    "unicode": "ebfc",
+    "description": ""
+  },
+  {
+    "short_name": "arrow-circle-left",
+    "character": "",
+    "unicode": "ebfd",
+    "description": ""
+  },
+  {
+    "short_name": "arrow-circle-right",
+    "character": "",
+    "unicode": "ebfe",
+    "description": ""
+  },
+  {
+    "short_name": "arrow-circle-up",
+    "character": "",
+    "unicode": "ebff",
+    "description": ""
   }
 ]
