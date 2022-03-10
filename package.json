@@ -4,6 +4,7 @@
   "description": "A Figma plugin to use VS Code icons",
   "main": "code.js",
   "scripts": {
+    "build": "npx webpack",
     "watch": "webpack --mode=development --watch"
   },
   "author": "",

@@ -1,0 +1,73 @@
+# Node.js
+# Build a general Node.js project with npm.
+# Add steps that analyze code, save build artifacts, deploy, and more:
+# https://docs.microsoft.com/azure/devops/pipelines/languages/javascript
+trigger:
+  - main
+jobs:
+  - job: Compliance
+    displayName: Compliance & security
+    pool:
+      vmImage: 'windows-latest'
+    steps:
+     # 1) Run CredScan to detect any credentials in the code.
+      - task: CredScan@2
+        displayName: 🔐 CredScan
+        inputs:
+          toolMajorVersion: V2
+          verboseOutput: true
+      # 2) Run PoliCheck to detect global readiness red flags
+      - task: PoliCheck@1
+        displayName: 🌎 PoliCheck
+        inputs:
+          inputType: Basic
+          targetType: F
+          targetArgument: $(Build.SourcesDirectory)
+          result: PoliCheck.xml
+          optionsXS: 1 # Scan subfolders
+          optionsPE: 1 # Enable exclusions
+          # Exclude folders like node_modules, dist, .git etc.
+          optionsUEPATH: $(Build.SourcesDirectory)/policheck/UserExclusion.xml
+      # 3) Run Gurdian ESLint to detect code quality issues
+      - task: ESLint@1
+        displayName: 🛡 Guardian - ESLint
+        inputs:
+          Configuration: 'recommended'
+          TargetType: 'eslint'
+          TargetsESLint: |
+            $(Build.SourcesDirectory)/src/**/*.{js,ts}
+          ErrorLevel: 'warn'
+      # 4) Export compliance results
+      - task: SdtReport@2
+        displayName: 📄 Export compliance results
+        inputs:
+          GdnExportSarifFile: false
+          GdnExportAllTools: true
+  - job: Build
+    pool:
+      vmImage: 'windows-latest'
+    steps:
+      # 1) Install Node
+      - task: NodeTool@0
+        inputs:
+          versionSpec: 14.x
+        displayName: Install Node.js
+      # 2) Install dependencies
+      - script: npm install
+        displayName: Install dependencies
+      # 3) Build plugin
+      - script: npm run build
+        displayName: Compile plugin
+      # 6) Run Accessibility Insight checks
+      - task: accessibility-insights.prod.task.accessibility-insights@1
+        displayName: Scan for accessibility issues
+        inputs:
+          siteDir: '$(System.DefaultWorkingDirectory)/dist'
+          localhostPort: '8080'
+          scanTimeout: 600000
+        continueOnError: true
+      - publish: '$(System.DefaultWorkingDirectory)/_accessibility-reports'
+        displayName: Upload report artifact
+        condition: succeededOrFailed()
+        artifact: 'accessibility-reports'
+        continueOnError: true
