@@ -2452,5 +2452,77 @@
     "character": "",
     "unicode": "ebff",
     "description": ""
+  },
+  {
+    "short_name": "layout-sidebar-right-off",
+    "character": "",
+    "unicode": "EC00",
+    "description": ""
+  },
+  {
+    "short_name": "layout-panel-off",
+    "character": "",
+    "unicode": "EC01",
+    "description": ""
+  },
+  {
+    "short_name": "layout-sidebar-left-off",
+    "character": "",
+    "unicode": "EC02",
+    "description": ""
+  },
+  {
+    "short_name": "heart-filled",
+    "character": "",
+    "unicode": "EC04",
+    "description": ""
+  },
+  {
+    "short_name": "map",
+    "character": "",
+    "unicode": "EC05",
+    "description": ""
+  },
+  {
+    "short_name": "map-filled",
+    "character": "",
+    "unicode": "EC06",
+    "description": ""
+  },
+  {
+    "short_name": "circle-small",
+    "character": "",
+    "unicode": "EC07",
+    "description": ""
+  },
+  {
+    "short_name": "bell-slash",
+    "character": "",
+    "unicode": "EC08",
+    "description": ""
+  },
+  {
+    "short_name": "bell-slash-dot",
+    "character": "",
+    "unicode": "EC09",
+    "description": ""
+  },
+  {
+    "short_name": "comment-unresolved",
+    "character": "",
+    "unicode": "EC0A",
+    "description": ""
+  },
+  {
+    "short_name": "git-pull-request-go-to-changes",
+    "character": "",
+    "unicode": "EC0B",
+    "description": ""
+  },
+  {
+    "short_name": "git-pull-request-new-changes",
+    "character": "",
+    "unicode": "EC0C",
+    "description": ""
   }
 ]

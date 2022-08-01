@@ -17,6 +17,7 @@ const icons = data['default']
 // load fonts
 async function loadFonts() {
   await figma.loadFontAsync({ family: "Roboto", style: "Regular" })
+  await figma.loadFontAsync({ family: "Inter", style: "Regular" })
   await figma.loadFontAsync({ family: "codicon", style: "Regular" }).catch(e => {
     console.log(e)
     figma.ui.postMessage({ type: 'hasIcons', codicons: false })
